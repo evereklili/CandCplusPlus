@@ -1,0 +1,351 @@
+////5.hafta Yapıcılar Kurucular ve Yok Ediciler,
+///*#include<iostream>,
+// 
+//#include <conio.h>
+//using namespace std;
+//
+//class Araba {
+//private:
+//	int model;
+//	string marka;
+//	string renk;
+//public: 
+//	void sur() {
+//		cout << marka << " marka " << model << " model  arac..." << endl;
+//	}
+//	Araba() {
+//		model = 2019; marka = "Fiesta", renk = " Siyah";
+//	}
+//
+//
+//};
+//*/
+///*
+//bir arabamız örnek elimizde kullanacağız. Sürekli ve en çok tercih edilen bir yapı olabilir. Standart üretilen bir marka ve model elimizde bir araç olsun. 
+//o renk marka model araba sürülüyor densin. ARaba fabrikanız var hiç bir bilgi gelmezse  müşterilerimize üretilen standart araç üretelim ve gönderelim. 
+//ARabayı sürüyoruz.Yani nesne üretildiği an, bize standart şu şu bilgilerle araç üretelim. biz buna default construrct diyoruz. 
+//Method şekindedir. Yapıcıların isimleri class ile aynı olur. geriye deger dondurmez ve public erişimlidir. 
+//*/
+///*
+//
+//
+//int main()
+//{
+//	Araba x1;
+//	x1.sur();
+//	return 0;
+//}
+//*/
+////5.hafta Yapıcılar Kurucular ve Yok Ediciler,
+////#include<iostream>,
+////
+////#include <conio.h>
+////using namespace std;
+////
+////class Araba {
+////private:
+////	int model;
+////	string marka;
+////	string renk;
+////public:
+////	void sur() {
+////		cout << marka << " marka " << model << " model  arac..." << endl;
+////	}
+////	Araba() {
+////		model = 2019; marka = "Fiesta", renk = " Siyah";
+////	}
+////
+////
+////};
+////
+/////*
+////bir arabamız örnek elimizde kullanacağız. Sürekli ve en çok tercih edilen bir yapı olabilir. Standart üretilen bir marka ve model elimizde bir araç olsun.
+////o renk marka model araba sürülüyor densin. ARaba fabrikanız var hiç bir bilgi gelmezse  müşterilerimize üretilen standart araç üretelim ve gönderelim.
+////ARabayı sürüyoruz.Yani nesne üretildiği an, bize standart şu şu bilgilerle araç üretelim. biz buna default construrct diyoruz.
+////Method şekindedir. Yapıcıların isimleri class ile aynı olur. geriye deger dondurmez ve public erişimlidir.
+////*/
+////
+////int main()
+////{
+////	Araba* x1 = new Araba();
+////	x1->sur();  //default Construct tanımladık. 
+////	return 0;
+////}
+//
+//////5.hafta Yapıcılar Kurucular ve Yok Ediciler,
+////#include<iostream>,
+////
+////#include <conio.h>
+////using namespace std;
+////
+////class Araba {
+////private:
+////	int model;
+////	string marka;
+////	string renk;
+////public:
+////	void sur() {
+////		cout << marka << " marka " << model << " model  arac..." << endl;
+////	}
+////	Araba() {
+////		model = 2019; marka = "Fiesta", renk = " Siyah";
+////	}
+////
+////
+////};
+////
+/////*
+////bir arabamız örnek elimizde kullanacağız. Sürekli ve en çok tercih edilen bir yapı olabilir. Standart üretilen bir marka ve model elimizde bir araç olsun.
+////o renk marka model araba sürülüyor densin. ARaba fabrikanız var hiç bir bilgi gelmezse  müşterilerimize üretilen standart araç üretelim ve gönderelim.
+////ARabayı sürüyoruz.Yani nesne üretildiği an, bize standart şu şu bilgilerle araç üretelim. biz buna default construrct diyoruz.
+////Method şekindedir. Yapıcıların isimleri class ile aynı olur. geriye deger dondurmez ve public erişimlidir.
+////*/
+////
+////int main()
+////{
+////	Araba *x1 = new Araba();
+////	x1->sur();
+////	//bu yukardıdaki default construct denir. Hepsin yazmak zorunda değiliz. özellikle marka, model veya rengini boş bırakabiliriz. Buna default constructor denir. Kurucu fonkisyonlar sınfıların üye değerlerine başlangıç değerini verir. Kurucu fonskiyonlar
+////	//otomatik olarak başlatılır. Kurucu sınıf ismi ile aynı ismi alır. Bu fonksiyonlar parametreli veya parametresiz olabilir. Aynı sınıf için birden fazla fonkisyonkullanılır. ve buna aşırı yükleme yapılabilnir.
+////	
+////	
+////
+////	retun 0;
+////}
+//
+//
+////5.hafta Yapıcılar Kurucular ve Yok Ediciler,
+//#include<iostream>,
+//
+//#include <conio.h>
+//using namespace std;
+//
+//class Araba {
+//private:
+//	int model;
+//	string marka;
+//	string renk;
+//public:
+//	void sur() {
+//		cout << marka << " marka " << model << " model  arac..."<<renk<<endl;
+//	}
+//	Araba() {
+//		model = 2019; marka = "Fiesta", renk = " Siyah";
+//	}
+//	Araba(string renk) {
+//		model = 2019; marka = "Feista."; this->renk = renk;
+//
+//	}
+//	Araba(string renk, int model) {
+//		this->model = model; marka = "Feista."; this->renk = renk;
+//	}
+//
+//
+//};
+//
+// 
+//int main()
+//{
+//	Araba *x1 = new Araba();
+//	Araba* x2 = new Araba("Beyaz");
+//	Araba* x3 = new Araba("Mavi",2200);
+//
+//	
+//	
+//	x1->sur();
+//	x2->sur();
+//	x3->sur();
+//
+//
+//
+//
+//
+//	return 0;
+//}
+//
+////bazı kalıplar tanımlayıp onun üzerine istediğimiz gibi inşaa kurabiliriz. 
+////
+
+
+
+//#include<conio.h>
+//#include<iostream>
+//
+//using namespace std;
+//
+//class Kutu {
+//public:
+//	void adresGoster()
+//	{
+//		cout << this << endl;
+//	}
+//};
+//int main(void)
+//{
+//	Kutu kt1;
+//	cout<< &kt1 << endl;
+//	kt1.adresGoster();
+//	getch();
+//	getch();
+//	return 0;
+//}
+ 
+
+//#include<iostream>
+//#include<conio.h>
+//using namespace std;
+//
+//class Kutu {
+//	int a, b;
+//public: 
+//	void DegerVer(int, int);
+//	void adresGoster()
+//	{
+//		cout << this << endl;
+//	}
+//};
+//void Kutu::DegerVer(int x, int y)
+//{
+//	a = x;
+//	b = y;
+//
+//}
+//
+//int main(void )
+//{
+//	Kutu k1;
+//	k1.DegerVer(10, 12);
+//	cout << &k1 << endl;
+//	k1.adresGoster();
+//	return  0;
+//
+//
+//}
+
+//#include<iostream>
+//#include<conio.h>
+//using namespace std;
+//
+//class Dortgen {
+//public: 
+//	int x, y, gen, yuk;
+//	void DegerVer(int, int, int, int);
+//	int Alan(void);
+//	Dortgen* Buyuk(Dortgen& nesne);
+//};
+//
+//
+//void Dortgen::DegerVer(int a, int b, int g, int h) {
+//	x = a; y = b;
+//	gen = g;
+//	yuk = h;
+//
+//}
+//int Dortgen::Alan(void) {
+//	return gen * yuk;
+//}
+//Dortgen* Dortgen::Buyuk(Dortgen& nesne)
+//{
+//	int alan1, alan2;
+//	alan1 = yuk * gen;
+//	alan2 = nesne.yuk * nesne.gen;
+//	if (alan1 > alan2) return this;
+//	else return &nesne;
+//}
+//
+//int main(void)
+//{
+//	
+//	{
+//		Dortgen D1, D2;
+//		Dortgen* D3; //new Dortgen; ????
+//
+//		D1.DegerVer(3, 4, 7, 90);
+//		D2.DegerVer(7, 2, 65, 60);
+//		cout << "Alan 1:" << D1.Alan() << "\n";
+//		cout << "Alan 2: " << D2.Alan() << endl;
+//		D3 = D2.Buyuk(D1); //D2 nesnesi büyük fonksiyonu çağrıyor. D1 Nesnesi parametre olarak giriyor. 
+//		cout << endl;
+//		cout << "x= " << D3->x << " y = " << D3->y << " Buyuk =" << D3->Alan() << endl;
+//
+//	}
+//
+//
+//
+//	return  0;
+//
+//
+//}
+//
+///*Alan 1:630
+//Alan 2: 3900
+//
+//x= 7 y = 2 Buyuk =3900
+//*/
+
+
+
+//#include<iostream>
+//#include<conio.h>
+//#include<list>
+//#include<math.h>
+//using namespace std;
+//
+//class Packet {
+//private: 
+//	string type;
+//	int source;
+//	int dest;
+//	int size;
+//public:
+//	void setVariable(string, int, int, int);
+//	string getType() { return type;  }
+//	int getSourceId() { return source;  }
+//	int getDestId() { return dest;  }
+//	int getSize() { return size;  }
+//	void getMaxPacket(Packet);
+//	void sendPacket(Packet); //?
+//
+//};
+// 
+//void Packet::setVariable(string t, int s, int d, int sz)
+//{
+//	type = t;
+//	source = s;
+//	dest = d;
+//	size = sz;
+//}
+//
+//void Packet::getMaxPacket(Packet pt)
+//{
+//	if (this->getSize() > pt.getSize())
+//		sendPacket(*this);
+//	else
+//		sendPacket(pt);
+//
+//}
+//void Packet::sendPacket(Packet pt)
+//{
+//	cout << pt.type << " send from " << pt.source << " to " << pt.dest << endl;
+//}
+//
+//int main(void)
+//{
+//	Packet p1, p2;
+//	p1.setVariable("Route Request ", 192, 193, 512);
+//	p2.setVariable("Route Require", 194, 193, 1024);
+//	p1.getMaxPacket(p2);
+//
+// 
+//
+//
+//	getch();
+//
+//	return  0;
+//
+//}
+//
+///*
+//Route Require send from 194 to 193
+//
+//*/
