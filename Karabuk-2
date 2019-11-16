@@ -1,0 +1,475 @@
+//
+////#include<stdio.h>
+////#include<conio.h>
+////#include<string.h>
+////#include<math.h>  
+////
+////void b_to_d(char result[]); //binary to decimal
+////void d_to_b(int dec, char binary[]); // decimal to binary
+////
+////main()
+////{
+////	int ch, n1, n2, i = 0, j, k, l, carry, r, x1, x2, x;
+////	char bn1[30], bn2[30], result[30], binary[30];
+////	char multi[30][30];
+////	clrscr();
+////	do
+////	{
+////		printf("<1> input first operand \n");
+////		printf("<2> input second operand \n");
+////		printf("<3> binary addition \n");
+////		printf("<4> binary subtraction \n");
+////		printf("<5> binary multiplation \n");
+////		printf("<6> result to decimal \n");
+////		printf("<7> Exit \n\n");
+////		do
+////		{
+////			printf("enter your choice ");
+////			scanf("%d", &ch);
+////		} while (ch > 7 || ch < 1);
+////		switch (ch)
+////		{
+////		case 1:
+////			printf("\n input first operand ");
+////			scanf("%d", &n1);
+////			x1 = n1;
+////			d_to_b(n1, binary);
+////			for (i = 0; binary[i] != '\0'; ++i)
+////				bn1[i] = binary[i];
+////			bn1[i] = '\0';
+////			break;
+////		case 2:
+////			printf("\n input second operand ");
+////			scanf("%d", &n2);
+////			x2 = n2;
+////			d_to_b(n2, binary);
+////			for (i = 0; binary[i] != '\0'; ++i)
+////				bn2[i] = binary[i];
+////			bn2[i] = '\0';
+////			break;
+////		case 3:		//addition
+////			for (i = 0; i < 30; ++i)      //reset result
+////				result[i] = '\0';
+////			carry = 0;
+////			if (strlen(bn1) < strlen(bn2))
+////				r = strlen(bn2);
+////			else
+////				r = strlen(bn1);
+////			for (i = 0; i < r; ++i)
+////			{
+////				result[i + 1] = '\0';
+////				if (carry == 0)
+////				{
+////					if (bn1[i] - 48 + bn2[i] - 48 + carry == 1)
+////						result[i] = bn1[i] - 48 + bn2[i] - 48 + 48;
+////					else
+////						result[i] = 0 + 48;
+////				}
+////				else
+////				{
+////					if (bn1[i] - 48 + bn2[i] - 48 + carry == 2)
+////						result[i] = 0 + 48;
+////					else
+////						result[i] = 1 + 48;
+////				}
+////				if (bn1[i] - 48 + bn2[i] - 48 + carry > 1)
+////					carry = 1;
+////				else
+////					carry = 0;
+////				if (carry == 1)
+////					result[i + 1] = carry + 48;
+////			}
+////			printf("\n%s\n", strrev(result));
+////			break;
+////		case 4:		//subtraction
+////			for (i = 0; i < 30; ++i)      //reset result
+////				result[i] = '\0';
+////			carry = 0;
+////			if (strlen(bn1) < strlen(bn2))
+////				r = strlen(bn2);
+////			else
+////				r = strlen(bn1);
+////			for (i = 0; i < r; ++i)
+////			{
+////				result[i + 1] = '\0';
+////				if (bn1[i] < bn2[i])
+////					carry = 2, --bn1[i + 1];
+////				else
+////					carry = 0;
+////				if (carry + bn1[i] - 48 - bn2[i] + 48 == 1)
+////					result[i] = 1 + 48;
+////				else
+////					if (carry + bn1[i] - 48 - bn2[i] + 48 == 0)
+////						result[i] = 0 + 48;
+////			}
+////			printf("\n%s\n", strrev(result));
+////			break;
+////		case 5:		//binary multiplication complited on 27-03-2004
+////			for (i = 0; i < 30; ++i)      //reset result
+////				result[i] = '\0';
+////			strrev(bn2); // reversing second binary operand
+////			k = 0, x = 0;
+////			for (i = 0; i < strlen(bn2); ++i)  //creating array for addition
+////				if (bn2[i] == '1')
+////				{
+////					for (j = i + 1; bn2[j] != '\0'; ++j)
+////						multi[k][x++] = '0';
+////					for (l = 0; bn1[l] != '\0'; ++j, ++l)
+////						multi[k][x++] = bn1[l];
+////					for (; x < 30; ++j)
+////						multi[k][x++] = '0';
+////					++k, x = 0;
+////				}
+////			l = 0;
+////			for (j = 0; j < 30; ++j)  //addition of all columns without carry
+////			{
+////				x = 0;
+////				for (i = 0; i < k; ++i)
+////					x += (multi[i][j] - 48);
+////				multi[0][l++] = x;
+////			}
+////			for (i = 0; i < 30; ++i)   //loop for including carry.
+////				if (multi[0][i] > 1)
+////					multi[0][i + 1] += ((multi[0][i] - (multi[0][i] % 2)) / 2);
+////			printf("\n");
+////			for (i = 29; i >= 0; --i)  // excluding first zero's (0's) of array
+////				if (multi[0][i] != 0)
+////					break;
+////			j = 0;
+////			for (; i >= 0; --i)   // final calculations and print
+////				if (multi[0][i] < 48)
+////				{
+////					multi[0][i] %= 2;
+////					result[j++] = multi[0][i] + 48;
+////					//	printf("%d",multi[0][i]);
+////				}
+////			printf("\n");
+////			printf("%s\n", result);
+////			break;
+////		case 6:		//result in decimal
+////			b_to_d(result);
+////			printf("\n");
+////			break;
+////		}
+////		n1 = x1;
+////		d_to_b(n1, binary);
+////		for (i = 0; binary[i] != '\0'; ++i)
+////			bn1[i] = binary[i];
+////		bn1[i] = '\0';
+////
+////		n2 = x2;
+////		d_to_b(n2, binary);
+////		for (i = 0; binary[i] != '\0'; ++i)
+////			bn2[i] = binary[i];
+////		bn2[i] = '\0';
+////
+////	} while (ch != 7);
+////	printf("\n\n i will wait for your mails");
+////	getch();
+////	return 0;
+////}
+////
+////void b_to_d(char result[]) //binary to decimal
+////{
+////	short int i;
+////	long int dec = 0;
+////	strrev(result);
+////	for (i = 0; i < strlen(result); ++i)
+////		dec += (result[i] - 48) * pow(2, i);
+////	printf("result in decimal is %ld\n", dec);
+////	strrev(result);
+////}
+////
+////void d_to_b(int dec, char binary[]) // decimal to binary
+////{
+////	int i = 0;
+////	while (dec > 0)
+////	{
+////		binary[i++] = dec % 2 + 48;
+////		binary[i] = '\0';
+////		dec -= (dec % 2);
+////		dec /= 2;
+////	}
+////}
+//
+//
+////#include<iostream>
+////#include<conio.h>
+//////hafta 6 bu hafta this işaretçisi ve arkadaşlık işlenecektir. 
+/////* 
+////Özel işaretçi olup, sınıf içindeki yer alan fonksiyonların(methodların) çağrılması hainde hangi nesne tarafından çarılıldığını bulmamızı sağlar. 
+////bir fonksiyonun hangi 
+////*/
+////using namespace std;
+////class Kutu {
+////public:
+////	void adresGoster() {
+////		cout << this << endl;
+////	}
+////};
+////int main()
+////{
+////
+////	Kutu k1, k2;
+////	k1.adresGoster();
+////	cout << &k1 << endl;
+////	k1.adresGoster();
+////	k2.adresGoster();
+////	 
+////	return 0;
+////}
+////
+//
+//
+//#include<iostream>
+//#include<conio.h>
+//using namespace std;
+//
+//class Kutu {
+//private:
+//	int gen, uz, yuk;
+//public:
+//	int hacim(int gen, int uz, int yuk){ return gen * uz * yuk; }
+//	Kutu() {  }
+//	Kutu(int gen, int yuk, int uz) { this->gen = gen;  this->uz = uz; this->yuk = yuk; }
+//	void karsilastir(Kutu k2){ 
+//		if (this->hacim() > k2.hacim())
+//		{
+//			cout << "Kutu 1> Kutu 2" << endl;
+//		}
+//		else
+//		{
+//			cout << "Kutu 1 büyük değil Kutu 2" << endl;
+//		}
+//	
+//	
+//	}
+//};
+//int main()
+//{
+//	Kutu k1(5,6,10);
+//	Kutu k2(4, 5, 50);
+//
+//	cout << "Kutu 1 Hacim: " << k1.hacim()<< endl;
+//	cout << "Kutu 2 Hacim:" << k2.hacim() << endl;
+//	k1.karsilastir(k2);
+//
+//
+//	return 0;
+//}
+
+
+//#include<iostream>
+//#include<conio.h>
+//
+//using namespace std;
+////sınıflarda arkadaşlık ve fonksiyonlarda arkadaşlık vardır PRİVATE fonksiyona erişmek nasıl oluyor? 
+//class Kutu{
+//private:
+//	int gen; int yuk; int uz;
+//public:
+//	Kutu(){ }
+//	Kutu(int gen, int yuk, int uz) { this->gen = gen; this->uz = uz; this->yuk = yuk;  }
+//	int hacim() { return gen * uz * yuk; }
+//	void karsilastir(Kutu k2) {   //
+//		if (this->hacim() > k2.hacim())  //karşılaştır methoduna gidiyor ve kt1 manasına geliyor. buradaki this anlamı. 
+//			cout << "Kutu1 buyuk Kutu 2" << endl;
+//		else
+//			cout << "Kutu2 büyük Kutu1 den." << endl;
+//	}
+//};
+//
+//int main()
+//{
+//	Kutu kt1(5, 6, 7);
+//	Kutu kt2(10, 15, 20);
+//	cout << "Kutu1 hacmi:" << kt1.hacim() << endl;
+//	cout << "Kutu2 hacmi:" << kt2.hacim() << endl;
+//	kt1.karsilastir(kt2);
+// 
+//
+//	return 0;
+//}
+
+/*
+Kutu1 hacmi:210
+Kutu2 hacmi:3000
+Kutu2 bⁿyⁿk Kutu1 den.
+
+C:\Users\omerd\source\repos\C++EmptyProje\Debug\C++EmptyProje.exe (process 10612) exited with code 0.
+To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+Press any key to close this window . . .
+*/
+
+
+//#include<iostream>
+//#include<conio.h>
+//
+//using namespace std;
+////fonksiyonlarda ve sınıflarda arkadaşlık seklinde ikiye ayıracağıaz. 
+//class Sample {
+//private:
+//	int x, y;
+//public:
+//	void Goster() {
+//		x = 10; y = 20;
+//		cout << "x in degeri:" << x << " y nin degeri: " << y << endl;
+//	}
+//	 
+//	 
+//}s;
+//
+//
+////void func()
+////{
+////	s.x = 100;
+////	s.y = 500;
+////	cout << s.x << endl;
+////	cout << s.y << endl;
+////}
+//int main()
+//{
+//	Sample s;
+//	s.Goster(); //bu durumda bellekten bir değer atar. 
+//
+//	return 0;
+//}
+//
+///*
+//
+//x in degeri:10 y nin degeri: 20 ÇALIŞIR AMA 
+//
+//C:\Users\omerd\source\repos\C++EmptyProje\Debug\C++EmptyProje.exe (process 15256) exited with code 0.
+//To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+//Press any key to close this window . . .
+//
+//*/
+
+
+//#include<iostream>
+//#include<conio.h>
+//
+//using namespace std;
+////fonksiyonlarda ve sınıflarda arkadaşlık seklinde ikiye ayıracağıaz. 
+//class Sample {
+//public:
+//	int x, y;
+//public:
+//	void Goster() {
+//		x = 10; y = 20;
+//		cout << "x in degeri:" << x << " y nin degeri: " << y << endl;
+//	}
+//
+//
+//}s;
+//
+//
+//void func()
+//{
+//	s.x = 100;
+//	s.y = 500;
+//	cout << s.x << endl;
+//	cout << s.y << endl;
+//}
+//int main()
+//{
+//	Sample s;
+//	s.Goster(); //bu durumda bellekten bir değer atar. 
+//
+//	return 0;
+//}
+//
+///*
+//
+//x in degeri:10 y nin degeri: 20
+//
+//C:\Users\omerd\source\repos\C++EmptyProje\Debug\C++EmptyProje.exe (process 15256) exited with code 0.
+//To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+//Press any key to close this window . . .
+//
+//*/
+
+
+//sınıflarda arkadaşlık
+/*
+bir sınıf tanımlanırken arkadaş sınıf olarak tanımlanabilinir. 
+Sınıflar oluşturulrken bir sınıf veya herhangi bir fonkisyon bir başka sınıfın arkadaşı olarka taınlanabilinir. Bu durma arkadaş sınıf veya fonksiyon arkadaşı oldğu sınıfın üyelerine erişebilir. 
+
+*/
+
+//#include<iostream>
+//using namespace std;
+//class Ahmet {
+//public: 
+//	string ahmetEsya;
+//public:
+//	void esyaSatinAl(string s) { ahmetEsya = s;  }  
+////friend class Bulent. 
+//}a;
+//
+//class Bulent {
+//private: 
+//	string bulentEsya;
+//public:
+//	void kullan(Ahmet e) {
+//		bulentEsya = e.ahmetEsya;
+//	
+//	}
+//	void arama()
+//	{
+//		cout << "ben bulent" << endl;
+//		cout << "ahmet almis oldugum" << endl;
+//		cout << bulentEsya << "ile arama yaptim." << endl;
+//	}
+//}b;
+//
+//
+//int main()
+//{
+//	a.esyaSatinAl("ahmetin telefonu");
+//	b.kullan(a);
+//	b.arama();
+//	
+//	return 0;
+//}
+
+
+#include<iostream>
+using namespace std;
+class Ahmet {
+private:
+	string ahmetEsya;
+public:
+	void esyaSatinAl(string s) { ahmetEsya = s; }
+	//friend class Bulent. 
+	friend class Bulent;
+}a;
+
+class Bulent {
+private:
+	string bulentEsya;
+public:
+	void kullan(Ahmet e) {
+		bulentEsya = e.ahmetEsya;
+
+	}
+	void arama()
+	{
+		cout << "ben bulent" << endl;
+		cout << "ahmet almis oldugum" << endl;
+		cout << bulentEsya << "ile arama yaptim." << endl;
+	}
+}b;
+
+
+int main()
+{
+	a.esyaSatinAl("ahmetin telefonu");
+	b.kullan(a);
+	b.arama();
+
+	return 0;
+}
+/* 
+ya da bir public method yazmalıyız. 
+*/
