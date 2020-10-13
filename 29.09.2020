@@ -1,0 +1,275 @@
+/*
+#include<stdio.h>
+int main()
+{
+    int i,j,N;
+    scanf("%d",&N);     
+    for(i=1;i<=N;i++)
+    {
+        for(j=1;j<=N-i;j++)
+        {
+            printf(" ");
+        }
+        for(j=1;j<=2*i-1;j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+
+    }
+    
+    
+    
+    return 0;
+}
+*/
+/*
+
+#include<stdio.h>
+int main()
+{
+    int i,j,N,K;
+    scanf("%d,%d",&N,&K);
+    for(i=1;i<=N;i++)
+    {
+        for(j=1;j<=N-i;j++)
+        {
+            printf(" "); 
+            
+        }
+        for(j=1;j<=2*i-1;j++)
+        {
+            printf("*");
+            
+        }
+        printf("\n");
+        
+    }
+    for(i=1;i<=K;i++)
+    {
+        for(j=1;j<=N-1;j++)
+        {
+            printf(" ");
+            
+        }
+        printf("*\n");
+     
+    }
+    
+    return 0;
+    
+}
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int i,j,N;
+    scanf("%d",&N);
+    for(i=1;i<=N;i++)
+    {
+        for(j=1;j<=N-i;j++)
+        {
+            printf(" ");
+        }
+        if(i==1)
+        {
+            printf("A\n");
+            continue;
+        }
+        printf("AA");
+        if(i==N/2+1)
+        {
+            for(j=1;j<=N-2;j++)
+            {
+                printf("A");
+            }
+            
+        }
+        else
+        {
+            for(j=1;j<=2*(i-2);j++)
+            {
+                printf(" ");
+            }
+        }
+        printf("A\n");
+    }
+    
+    return 0;
+}
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    double x, us, faktoriyel;
+    double toplam=0;
+    scanf("%lf",&x);
+    for(i=1;i<=9;i++)
+    {
+        us=1;
+        for(j=1;j<=i;j++)
+        {
+            us*=x;
+            
+        }
+        faktoriyel=1;
+        for(j=1;j<=i;j++)
+        {
+            faktoriyel*=j;
+            
+        }
+        toplam+=us/faktoriyel;
+        
+    }
+    printf("%lf",toplam);
+    
+    return 0;
+}
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int i;
+    double x,us=1, faktoriyel=1;
+    double toplam=0;
+    scanf("%lf",&x);
+    for(i=1;i<=9;i++)
+    {
+        us*=x;
+        faktoriyel*=1;
+        toplam+=us/faktoriyel;
+        
+    }
+    printf("%lf",toplam);
+    
+    return 0;
+}
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    double x,y;
+    double M=1,N=1;
+    double toplam=0;
+    scanf("%lf,%lf",&x,&y);
+    for(i=1;i<=11;i++){
+        N*=y;
+        
+    }
+    for(i=1;i<=10;i++)
+    {
+        M*=x;
+        N/=y;
+        toplam+=100/(M*N);
+    }
+    printf("%lf",toplam);
+    
+    return 0;
+
+*/
+/*
+ * 
+#include<stdio.h>
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    etiket:
+    printf("%d",N--);
+    if(N>0) { goto etiket; }
+    return 0;
+}
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    double i, t=103;
+    t=1/t;
+    for(i=101;i>=1;i--){
+        t=1/(i+t);
+        
+    }
+    printf("%lf",t);
+    
+    
+    return 0;
+}
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int X,a,b,c,d;
+    for(X=750;X>=1;X--)
+    {
+        a=750%X; 
+        b=1881%X;
+        c=3389%X;
+        d=5651%X;
+        if(a==b&&b==c&&c==d)
+        {
+            printf("%d",X);
+            break;
+        }
+    }
+    return 0;
+}
+*/
+/*
+#include<iostream>
+int main()
+{
+    
+    int x;
+    for(x=1000;;x++)
+    {
+        if(x%4==3&&x%7==3)
+        {
+            printf("%d",x);
+            break;
+        }
+    }
+    return 0;
+
+*/
+/*
+#include<iostream>
+int main()
+{
+    int x;
+    for(x=1;x<=250000;x++)
+    {
+        if(x%2==1&&x%3==2&&x%4==3&&x%5==4&&x%6==5&&x%7==0)
+        {
+            printf("%d \n",x);
+        }
+    }
+     
+     
+    return 0;
+}
+*/
+#include<stdio.h>
+int main()
+{
+    
+    int i,N,sayac=0;
+    scanf("%d",&N);
+    for(i=1;i<=N/2;i++)
+    {
+        if(N%i==0)
+        {
+            sayac++;
+        }
+    }
+    
+    printf("%d",sayac);
+    return 0;
+}

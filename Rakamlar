@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main()
+{
+    double x,y;
+    printf("x ve y degerlerini giriniz: ");
+    scanf("%lf, %lf: ",&x,&y);
+    printf("%lf \n: ",x/y);
+    return 0;
+}

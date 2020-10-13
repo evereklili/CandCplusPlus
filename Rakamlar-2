@@ -1,0 +1,36 @@
+/*
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+    int sayi=3, no=0;
+    double noktali;
+    int numara;
+    noktali=3.14;
+    numara=sayi;
+    return 0;
+}
+*/
+/*
+ * 
+
+#include <iostream>
+
+int main(int argc, char **argv)
+{
+    int x=3, y=4;
+    int z;
+    printf("%d\n",z);
+    z=y+x;
+    printf("%d\n",z);
+    x=x+3;
+    printf("%d\n",x);
+    y=x+y;
+    printf("%d\n",y);
+    z=z+x+y;
+    printf("%d\n",z);
+    
+    
+    return 0;
+}
+*/

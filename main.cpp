@@ -1,535 +1,272 @@
-//ömer doğu 
-//5.10.2020
-//c programlama dersi
+ /*
+  * #include<stdio.h>
+ int main()
+ {
+     if(1071&1023)
+     {
+         if(!0)
+             printf("Ömer\n");
+             else
+                 printf("Faruk \n");
+                 
+     }
+     return 0;
+ }
+ */
+ /*
+ #include<stdio.h>
+ int main()
+ {
+     // girilen sayı tek mi çift mi sonucu ekran yazdır. 
+     int x;
+     printf("Sayinizi giriniz:");
+     scanf("%lf",&x);
+     if((x%2==0))
+     {
+         printf("Sayiniz çifttir.");
+         
+     }
+     else
+         printf("Sayiniz tektir.");
+         
+  return 0;
+ }
+ 
+ */
+ /*
+ #include<stdio.h>
+ int main()
+ {
+     double x,y;
+     scanf("%lf %lf",&x,&y);
+     if(x<y)
+     {
+         printf("1.sayiniz kucuktur. \n");
+         
+     }else if(y<x)
+     {
+         printf("2.sayiniz kucuktur.\n");
+     }
+     else
+         printf("Sayilariniz esittir. \n");
+ }
+ */
+ /*
+ #include<stdio.h>
+ int main(){
+     bas:
+     int x,y,z;
+     scanf("%d %d %d",&x,&y,&z);
+     if(x>1000||y>1000||z>1000||x<-1000||y<-1000||z<-1000){
+          printf("[-1000,1000] araliginda olmalidir."); goto bas;
+     }
+        else{
+         
+             if(x>y&&y>z)
+                 printf("%d",x);
+                 else if(y>x&&x>z)
+                 {
+                     printf("%d",y);
+                     
+                 }
+                 else if(z>x&&x>y)
+                     printf("%d",z);
+                     
+        }   
+    return 0;
+ } 
+ // çözüm oluşmamıştır. 
+ */
+ /*
+  * 
+ 
+ #include<stdio.h>
+ int main()
+ {
+     int a,b,c, maxx=-10000;
+     scanf("%d, %d, %d",&a,&b,&c);
+     if(a>maxx)
+         maxx=a;
+         if(b>maxx)
+             maxx=b;
+             if(c>maxx)
+                 maxx=c;
+                 printf("%d", maxx);
+                 return 0;
+                 
+ }
+ 
+ */
+ /*
+ #include<stdio.h>
+ int main(){
+    //a ve b tamsayilari, ekrana sirasi ile şu durumda şartı sağliyorsa ilk durumu yazdirmalidir. 
+    // girilen sayilar eşitse, eşittir, ikinci sayi birinci sayiyi tam bölüyorsa, b/a; bu durumun hiç birini sağlamaz ise belirsiz yazdırmalıdır. 
+    int a,b;
+    scanf("%d, %d",&a,&b);
+    if(a==b)
+    {
+        printf(" sayilar esittir.");
+        
+    }
+    else if(a%b==0) 
+        {
+            printf("%d |%d",b,a);
+        }
+    else 
+        {
+            printf("Belirsizlik mevcuttur.");
+        }
+    return 0;
+    
+ }
+ */
+ 
+/*
+ * 
+#include<stdio.h>
+int main()
+{
+    int L,G;
+    scanf("%d, %d",&L,&G);
+    if(L<35) printf("kisa boylu");
+    else if(L<65) printf("orta boylu");
+    else printf("uzun boylu");
+    
+    if(G<45) printf("zayif");
+    else if(G<70) printf("normal");
+    else printf("agir");
+    return 0;
+    
+    
+}
+*/
+/*
+// verilen üç adet programı küçükten büyüğe doğru sıralayan programı bulunuz.(tamsayiyi)
+#include<stdio.h>
+int main()
+{
+    int x,y,z;
+    scanf("%d, %d, %d",&x,&y,&z);
+    if(x<=y && y<=z)  printf("%d %d %d ",x,y,z);
+    else if(x<=z&&z<=y) printf("%d %d %d ",x,y,z);
+    else if(y<=x&&x<=z) printf("%d %d %d ",y,x,z);
+    else if(y<=z&&z<=x) printf("%d %d %d ",y,z,x);
+    else if(z<=x&&x<=y) printf("%d %d %d ",z,x,y);
+    else if(z<=y&&y<=x) printf("%d %d %d ",z,y,x);
+    
+    return 0;
+    
+
+}
+*/
+/*
+ * 
+//sıfır 10 aralıiğinda olan sayıların okunuşunu yazan programı yazınız. 
+#include<stdio.h>
+int main()
+{
+    bas: 
+    int x;
+    scanf("%d",&x);
+    switch(x) 
+    {
+        case 1:printf("Bir"); break;
+        case 2:printf("İki"); break;
+        case 3:printf("Uc"); break;
+        case 4:printf("Dort"); break;
+        case 5:printf("Bes"); break;
+        case 6:printf("Alti"); break;
+        case 7:printf("Yedi"); break;
+        case 8:printf("Sekiz"); break;
+        case 9:printf("Dokuz"); break;
+        case 10:printf("On"); break;
+        default: printf("Durum yok. Sayiyi 0 ile 10 arasinda giriniz."); goto bas;
+    }
+    return 0;
+}
+
+*/
+/*
+#include<stdio.h>
+int main(){
+    int a,b,c,d,e;
+    scanf("%d, %d, %d, %d, %d",&a,&b,&c,&d,&e);
+    if(a%2==0&&b%2==0&&c%2==0&&d%2==0&&e%2==0) printf("Tumu cift sayidir.");
+    else if(a%2==1&&b%2==01&&c%2==1 && d%2==1 &&e%2==1) printf("Tumu tek sayidir.");
+    else printf("Karisik ortalik.");
+    return 0;
+    
+}*/
+
+/*
+ * 
+ * 
+#include<stdio.h>
+int main(){
+    
+    int ay;
+    scanf("%d",&ay);
+    if(ay<0||ay>12)
+    {
+        printf("0");
+    }
+    else if(ay==4||ay==6||ay==9||ay==11)
+        printf("30");
+    else if(ay==2) //subat ayi içindir
+        printf("28");
+        else 
+            printf("31"); //tum iflerden geçerse 31 gunluk aylar kalır. 
+                
+    
+    return 0;
+    
+}
+*/
 /*
 #include<stdio.h>
 int main()
 {
-    int arr[3][4]={{1,2,3,4},{1,2,3},{0}};
-    int i,j;
-    for(i=0;i<3;i++){
-        for(j=0;j<4;j++)
-        {
-            printf("%d",arr[i][j]);
-            
-        }
-        printf("\n");
-    }
-    
-}
-*/
-
-
-/*
-#include<iostream>
-using namespace std;
-int main()
-{
-    int a; //tipi ve ismi
-    a=10; //deger atama
-    cout<<a<<endl;
-    a++; //bir artır postfix
-    cout<<a<<endl;
-    ++a; //icrement bir artır prefix önce artıracak, sonra atayacaktır. 
-    cout<<a<<endl;
-    int b=20;
-    cout<<a+b<<endl; //10+20=30
-    cout<<10+20*2<<endl; //operater precedd  operator onceliği var. 
-    //temel dor işelm * / + - % 
-    cout<<15%2<<endl;  // sonuç 1 çıkacaktır. 
-    a--; //a=a-1 olur. assignment olarak geçmektedir. 
-    cout<<a<<endl;
-    cout<<a--<<endl;//ÖNce atar sonra deger verir. 
-    cout<<--a<<endl;
-    cout<<a++<<endl;  //Postincrement a nın degeri alınıp kullanılır sonra 1 artırılır. 
-    cout<<++a<<endl; // preincremnet a nın degeri 1 artırılıp ve sonra işleme alınır. 
-    
-                   
-    
-    
-    return 0;
-}
-
-*/
-/*
- * 
-#include<iostream>
-using namespace std;
-
-int main()
-{
-    cout<<"Uc tam sayi giriiz"<<endl;
-    int a,b,c;
-    cin>>a>>b>>c;
-    cout<<((a+b+c)*(a+b+c))<<endl;;
-    
-    
-    
-    return 0;
-}
-*/
-  /*
-#include<iostream>
-using namespace std;
-
-int main()
-{
-   int a;
-   a=10;
-   cout<<a<<endl;
-   int b=a<<2;
-   cout<<b<<endl;
-   b=(b>>3);
-   cout<<b<<endl; 
-   
-   
-   
-   int c=(01101&10110);
-   cout<<c<<endl;
-   int d=(22&13);
-   cout<<d<<endl;
-   
-   
-   int x=(22^13);
-   cout<<x<<endl;
-   x=22|13;
-   cout<<x<<endl;
-    return 0;
-}
-*/
-
-/*
-#include<iostream>
-using namespace std;
-int main(){
-    
-    int a=20;
-    
-    if(a<20){ //true dönerse 
-        cout<<"a 20 den kucuktur."<<endl;
-    }
-    else 
-        cout<<"a 20den kucuktur."<<endl;
-    if(a==20)
-            cout<<a<<endl;
-    
-    
-    return 0;
-}
-*/
-/*
-#include<iostream>
-using namespace std;
-int main(){
-    
-    int a;//tip isim
-    cout<<"kullanıcıya sayı gr"<<endl;
-    cin>>a;
-    if(a<50)
+    int musteri_tipi;
+    double alisveris_tutari;
+    printf("Musteri Tipi: 1.Ogrenci, 2.Ogretmen, 3. Diger\n");    
+    scanf("%d",&musteri_tipi);
+    printf("AlisVeris Tutari Giriniz: \n");
+    scanf("%lf",&alisveris_tutari);
+    double a,b,c;
+    a=(alisveris_tutari-alisveris_tutari*10/100);
+    b=(alisveris_tutari-alisveris_tutari*20/100);
+    c=(alisveris_tutari-alisveris_tutari*1/100);
+    switch(musteri_tipi)
     {
-        cout<<"F"<<endl;
-    }
-    else if(a<70)
-    {
-        cout<<"C"<<endl;
+        case 1: printf("%lf",a); break;
+        case 2: printf("%lf",b); break;
+        case 3: printf("%lf",c);break;
+        default: printf("Diger durumlar canim..."); break;
         
     }
-    else if(a<90)
+    
+    return 0;
+}
+*/
+#include<stdio.h>
+int main()
+{
+    int gun, ay, yil;
+    scanf("%d, %d, %d",&gun,&ay, &yil);
+    if(yil<0||yil>9999)
     {
-        cout<<"B"<<endl;
+        printf("0");
         
     }
-    else 
+    else if(ay<1||ay>12)
     {
-        cout<<"A"<<endl; 
-    }
-    
-    return 0;
-}
-*/
-/*
-#include<iostream>
-using namespace std;
-int main(){
-    
-     int a;
-     cin>>a;
-     switch(a)
-     {
-         case 1: cout<<'1'; break;
-         case 2: cout<<'2'; break; //break olmaassa bütün switch key basar. 
+        printf("0");
         
-     }
-    
-    
-    return 0;
-}
-*/
-
-/*
-
-#include<iostream>
-using namespace std;
-int main(){
-    
-     int a,b;
-     cin>>a>>b;
-     if(a==b)
-     {
-         cout<<"iki sayi esittir"<<endl;
-     }
-     else 
-         cout<<"sayi esit degildir."<<endl;
-    
-    if(a!=b)
+    }else if((ay==4||ay=6||ay==9||ay==11)&&(gun<1||gun>30))
     {
-        cout<<"sayilar farklıdır"<<endl;
-    }else 
-        cout<<"iki sayi farkli değildir"<<endl;
-    if(a<b)
-    {
-        cout<<"ilk sayi kucuk"<<endl;
-    }else 
-        cout<<"ilk sayi kucuk degildir."<<endl;
-        
-    if(a<=b)
-    {
-        cout<<"ilk sayi kucuk esittir."<<endl;
-    }else 
-        cout<<"ilk sayi kucuk esit degildir"<<endl;
-    return 0;
-}
-
-*/
-
-/*
-#include<iostream>
-using namespace std;
-int enbuyuk(int,int,int);
-int main()
-{
-    int x,y,z;
-    cout<<"Uc sayi giriniz:";
-    cin>>x>>y>>z;
-    cout<<"Sayilarin en buyugu:"<<enbuyuk(x,y,z)<<endl;
-    
-    
-    system("PAUSE");    
-    return 0;
-}
-
-int enbuyuk(int a,int b,int c)
-{
-    int enb;
-    if(a>b)
-    {
-        enb=a;
-    }
-    else{
-        enb=b;
-    }
-    if(enb<c)
-    {
-        enb=c;
-    }
-    return enb;
-    
-}
-*/
-
-/*
-#include<iostream>
-using namespace std;
-int deneme(){
-    int x=10;
-    return x;
-}
-int main(void)
-{
-    cout<<deneme()<<endl;
-    
-    return 0;
-}
-*/
-/* 
-#include<iostream>
-using namespace std;
-int topla()
-{
-    int x,y;
-    cin>>x>>y;
-    return x+y;
-}
-int main(void)
-{
-    cout<<"Sayıların toplami:"<<topla()<<endl;
-    
-    
-    
-    return 0;
-}   
-*/
-/*
-
-#include<iostream>
-using namespace std;
-void degerile(int y)
-{
-    y=9;
-    cout<<"Deger ile cagirma!!!"<<endl;
-}
-int main()
-{
-    
-    int a=5;
-    cout<<"Degiskenin ilk degeri:"<<a<<endl;
-    degerile(a);
-    cout<<"Deger ile cagirdiktan sonra:"<<a<<endl;
-    
-    
-    
-    return 0;
-}
-
-*/
-/*
-<pre>Degiskenin ilk degeri:5
-Deger ile cagirma!!!
-Deger ile cagirdiktan sonra:5
-Hit any key to continue...
-
-*/
- /*
-#include<iostream>
-using namespace std;
-void ekranaYaz(int);
-int main() {
-    int i;
-    cout<<"bir sayi giriniz:"<<endl;
-    cin>>i;
-    ekranaYaz(i);
-    return 0;
-}
-void ekranaYaz(int x)
-{
-    cout<<"Fonksiyona parametre olarak verilen deger:"<<x<<endl; 
-    
-}
-*/
-/*
-#include<iostream>
-using namespace std;
-int ust_Alma(int, int);
-int main()
-{
-    
-    int a,b;
-    cout<<"Taban"<<endl; cin>>a;
-    cout<<"Ust : "<<endl; cin>>b;
-    cout<<a<<" ^ "<<b<<" = "<<ust_Alma(a,b)<<endl;
-    
-    
-    
-    return 0;
-}
-
-int ust_Alma(int x,int y)
-{
-    int t=1;
-    for(int i=1;i<=y;i++)
-    {
-        t=t*x;
+        printf("0");
         
     }
-    return t;
+    
 }
-
-*/
-
-/*
- * 
-
-#include<iostream>
-using namespace std;
-int faktoriyel(int);
-int main()
-{
-    int x;
-    cout<<"bir sayi giriniz:"<<endl;
-    cin>>x;
-    cout<<"Girilen sayinin faktoriyeli:"<<faktoriyel(x)<<endl;
-    
-    
-    
-    return 0;
-}
-
-int faktoriyel(int x)
-{
-    int i, faktoriyel=1;
-    for(i=x;i>0;i--)
-    {
-        faktoriyel=faktoriyel*i;
-    }
-    return faktoriyel;
-}
-
-*/
-/*
-#include<iostream>
-using namespace std;
-int fak(int);
-int main()
-{
-    int sayi; 
-    cout<<"Faktoriyeli alınacak sayiyi giriniz: ";
-    cin>>sayi;
-    cout<<fak(sayi)<<endl;
-    return 0;
-}
-int fak(int a)
-{
-    int x=1;
-    if(a>1) x=x*fak(a-1);
-    else x=1;
-    return 0;
-}
-
-*/
-/*
-#include<iostream>
-using namespace std;
-int main()
-{
-    int i=5;
-    int *ptr;
-    ptr=&i;
-    cout<<"i'nin adresi:"<<&i<<endl<<"ptr degiskenin degeri"<<ptr<<endl;
-    cout<<endl;
-    cout<<"i nin degeri: "<<i<<endl<<"*ptr nin degeri:"<<*ptr<<endl;
-    return 0;
-}
-*/
-
-/*
-#include<iostream>
-using namespace std;
-int main()
-{
-    int a,*aptr;
-    cout<<"Bir sayi giriniz:";
-    cin>>a;
-    aptr=&a;
-    cout<<endl;
-    cout<<*aptr<<" sayisi bellekte"<<aptr<<" adresine yerlesiti."<<endl;
-    cout<<endl;
-    
-    return 0;
-}
-*/
-
-
-
-/*
- * 
-#include<iostream>
-using namespace std;
-int main()
-{
-    int i[5]={1,2,3,4,5};
-    int *ptr;
-    ptr =i;
-    cout<<ptr<<" adresindeki deger"<<*ptr<<endl;
-    ++ptr;
-    cout<<ptr<<" adresindeki deger: "<<*ptr<<endl;
-    return 0;
-    
-    
-    return 0;
-}
-*/
-          /*/
-           * 
-#include<iostream>
-using namespace std;
-int main()
-{
-    int i[5]={1,2,3,4,5};
-    int *ptr;
-    ptr=i;
-    cout<<ptr<<" adresindeki degeri :"<<*ptr<<endl;
-    ++ptr;
-    cout<<ptr<<" adresindeki degeri :"<<*ptr<<endl;
-    
-    
-    
-    return 0;
-}
-
-*/
-
-/*
-#include<iostream>
-using namespace std;
-int main()
-{
-     int i[6]={1,2,3,4,5,6}; //dizi oluşturduk 6 elemanlı yeni dizi. 
-     int *ptr;  //daha sonra int türünden ptr adına bir pointer oluşturuldu. 
-     ptr=i; //bu göstericiye dizinin başlangıç adresini atadık. 
-     cout<<"*ptr nin ilk degeri "<<*ptr<<endl; //*ptr nin ilk değeri yani pointerin işaret ettiği yerdeki ilveriyi ekrana yazdırıyor 
-     cout<<"++*ptr nin  degeri :"<<++*ptr<<endl; //işlem önceliği öne çıkıyori  ve *ptr'nin degerini ++ ile arttırarak ptr göstericisinin işaret ettiği yerdeki değerin yani dizinin ilk elemanının değerinin 1 artırılmış hali ekrana yazılıyor. 
-     cout<<"*++ptr nin degeri:"<<*++ptr<<endl; //++ 
-     cout<<"*ptr++ nın degeri:"<<*ptr++<<endl;
-     cout<<"* ptr nin yeni degeri: "<<*ptr<<endl;
-    
-    
-    
-    return 0;
-}
-*/
-
-/*
-#include <iostream>
-#include <cstdio>
-#include <cstring>
-using namespace std;
-int main()
-{
-    
-    char *ptr; 
-    char isim[200];
-    int i=0;
-    cout<<"isim giriniz:";
-    gets(isim);
-    ptr=isim;
-    while(ptr[i]!=NULL)
-    {
-        cout<<ptr[i]<<endl;
-    }
-    cout<<endl;
-    
-    return 0;
-}
-
-*/
-
-       /*
-        * 
-#include <iostream>
-#include <cstdio>
-
-using namespace std;
-
-int main()
-{
-    char str[100];
-    cout << "Enter a string: ";
-    gets(str);
-    cout << "You entered: " << str;
-    
-    return 0;
-},
-
-*/
-
-#include<iostream>
