@@ -1,0 +1,401 @@
+//#include<stdio.h>
+//int main()
+//{
+//	int s1, s2, carp=0;
+//	printf("S1 ve S2 giriniz:");
+//	scanf_s("%d,%d", &s1, &s2);
+//	for (int i = 1; i <= s1; i += 1)
+//	{
+//		carp = carp + s2;
+//	}
+//	printf("%d x %d = %d dir.", s1, s2, carp);
+//	return 0;
+//}  //çarpma işlemi olmadan burada toplama yolu ile işlem yapıldı. 
+ 
+
+//
+//#include <iostream>
+//#include<string.h>
+//using namespace std;
+//
+//int getString(string str) {
+//    int res = 99999;
+//    if (str.size() == 1) {
+//        int num = str[0] - '0';
+//        //c = 'a' + (num-1);
+//        return num - 1;
+//    }
+//    else if (str.size() > 1) {
+//        int num = ((str[0] - '0') * 10) + (str[1] - '0');
+//        if (num > 26) {
+//            return res;
+//        }
+//        else {
+//            //c = 'a' + (num-1);
+//            return num - 1;
+//        }
+//
+//    }
+//
+//    return res;
+//
+//}
+//
+//int helper(string input, string curString, string modString, string output[10000]) {
+//    static int i;
+//    int cs = getString(curString);
+//    if (input.empty() && cs < 27) {
+//        modString += ('a' + cs);
+//        output[i++] = modString;
+//        return i;
+//    }
+//
+//    if (cs < 27) {
+//        modString += ('a' + cs);
+//    }
+//
+//    int count = helper(input.substr(1), input.substr(0, 1), modString, output);
+//    if (input.length() > 1) {
+//        int check = getString(input.substr(0, 2));
+//        if (check < 27) {
+//            count = helper(input.substr(2), input.substr(0, 2), modString, output);
+//        }
+//    }
+//    return count;
+//}
+//
+//
+//int getCodes(string input, string output[10000]) {
+//    return helper(input, "", "", output);
+//}
+//
+//int main() {
+//    string input;
+//    cin >> input;
+//
+//    string output[10000];
+//    int count = getCodes(input, output);
+//    for (int i = 0; i < count && i < 10000; i++)
+//        cout << output[i] << endl;
+//    return 0;
+//}
+
+//#include<iostream>
+//#include<sstream>
+//using namespace std;
+//int main()
+//{
+//	stringstream ad;
+//	ad << "OMER DOGU";
+//	cout << ad.str() << endl;
+//	ad.str("");
+//	ad << "Busra DEMIREL";
+//	cout << ad.str();
+//	return 0;
+//}
+
+//#include<fstream>
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	ofstream dosya("deneme.txt");
+//	if (!dosya)
+//	{
+//		cerr << "dosya acilmadi." << endl;
+//		exit(1);
+//	}
+//	dosya << "OMER DOGU" << endl;
+//	dosya << "Büşra Demirel" << endl;
+//	dosya << "Ramazan Arıkan" << endl;
+//
+//	
+//	return 0;
+//}
+//#include<fstream>
+//#include<iostream>
+//#include<string>
+//using namespace std;
+//int main()
+//{
+//	ifstream dosya("deneme.txt");
+//	if (!dosya)
+//	{
+//		cerr << "Dosya acilmadi!!!" << endl;
+//		exit(1);
+//	}
+//	while (dosya)
+//	{
+//		string isim;
+//		getline(dosya, isim);
+//		cout << isim << endl;
+//	}
+//
+//	return 0;
+//}
+//100 sistemde olan yaızıyı yazınız. 
+//0-50 f
+//50-70 c
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int a;
+//	cout << "lütfen notun sayi değerini giriniz:" << endl;
+//	cin >> a;
+//	if (a < 50)
+//	{
+//		cout << "F" << endl;
+//	}
+//	else if (a < 70)
+//	{
+//		cout << "C" << endl;
+//	}
+//	else if (a < 90)
+//	{
+//		cout << "B" << endl;
+//	}
+//	else if (a > 90)
+//	{
+//		cout << "A" << endl;
+//	}
+//	else
+//	{
+//		cout << "yanlış not girişi yaptınız." << endl;
+//	}
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <math.h>
+//int main()
+//{
+//    int a, b, c;
+//    printf("A sayisini giriniz : ");
+//    scanf_s("%d", &a);
+//
+//    printf("B sayisini giriniz : ");
+//    scanf_s("%d", &b);
+//
+//    printf("C sayisini giriniz : ");
+//    scanf_s("%d", &c);
+//
+//    double sonuc = pow(a, 2) + pow(b, 2) + (3 * c);
+//    printf("Sonuc = %.2lf", sonuc);
+//    return 0;
+//}
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	cout << "Bir isçi işi kaç günde bitirmektedir?" << endl;
+//	int kacisci, kacgun;
+//	cin >> kacisci;
+//	cout << "Toplam kaç işçi çalışacak?" << endl;
+//	cin >> kacgun;
+//	cout << "İsin bitire süresi" << (kacgun/kacisci) << endl;
+//	return 0;
+//}
+//#include<iostream>
+//#include<cmath>
+//using namespace std;
+//int main()
+//{
+//	//bir dik üçgenin hipotenüs hespalarnır 
+//	cout << "Dik üçgenin ilk kenarını giriniz:" << endl;
+//	int kenar1, kenar2;
+//	cin >> kenar1;
+//	cout << "Dik üçgenin ikinci kenarın giriniz:" << endl;
+//	cin >> kenar2;
+//	cout << "hipotenüs uzunlugu:" << (sqrt(kenar1 * kenar1 + kenar2 * kenar1)) << endl;
+//
+//
+//	 
+//	return 0;
+//}
+
+//#include<iostream>
+//#include<cmath>
+//using namespace std;
+//int main()
+//{
+//	int a, b, c;
+//	cin >> a;
+//	cin >> b;
+//	c = sqrt(a * a + b * b);
+//	cout << "h=" << c << endl;
+//	cout << "cevresi:" << a + b + c << endl;
+//	cout << "Alani:" << a * b / 2 << endl;
+//
+//
+//	return 0;
+//}
+
+
+//#include<iostream>
+//#include<cmath>
+//using namespace std;
+//int main()
+//{
+//	 //yol hız vemesefa verilen yolun hızı bul. 
+//	int yol, hiz;
+//	cout << "mesafeyi giriniz:" << endl;
+//	cin >> yol;
+//	cout << "hizi giriniz:" << endl;
+//	cin >> hiz;
+//	cout << "tahmini varis süreniz:" << (float)yol / hiz << endl;
+//
+//
+//	return 0;
+//}
+/*
+* tekrarlı yapılara bakacağız. üç döngü yapsı var. while, dowhile, for vardır. 
+* while içine yazılan döngü doğru oldğu müddetçe çalşır. 
+* 
+
+*/
+//#include<iostream>
+//#include<cmath>
+//using namespace std;
+//int main()
+//{
+//	//int a;
+//	//a = 1;
+//	//while (a < 10)
+//	//{
+//	//	cout << "merhaba" << endl; a++;
+//	//}
+//	//cout << "anin degeri:" << a << endl;
+//	/*for (int i = 0; i <= 10; i++)
+//	{
+//		cout << "omer dogu" << i << endl;
+//	}*/
+//
+//	//do while gibi tekrar yapar. do while ozeldir. koşul sonra yazılır. yani şart en az bir kere çalışır. 
+//	//
+//	int x = 1;
+//	do {
+//		cout << "omerdogu.com" << endl;
+//		x++;
+//	} while (x < 10); //kontrol sondadır. 
+//	
+//	return 0;
+//}
+
+/*
+1 den 100 kadar olan tek sayıları başsır. */
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int a = 1;
+//	//while (a < 100)
+//	//{
+//	//	cout << "a degeri:" << a << endl;
+//	//	a += 2;
+//	//}
+//	while (a < 100)
+//	{
+//		if (a % 2 == 1)
+//		{
+//			cout << a << endl;
+//		}
+//		a++;
+//	}
+//
+//	return 0;
+//}
+
+//
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//
+//	for (int i = 1; i <= 100; i = i + 2)
+//	{
+//		cout << i << endl;
+//	}
+//	return 0;
+//}
+
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//
+//	for (int i = 50; i <= 70; i = i++)
+//	{
+//		if (i % 2 == 0)
+//		{
+//			cout << i << endl;
+//		}
+//	}
+//	return 0;
+//}
+
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//
+//	for (int i = 100; i >= 70; i--)
+//	{
+//		if (i % 7 == 0)
+//		{
+//			cout << i << " ";
+//		}
+//	}
+//
+//	return 0;
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//
+//	for (int i = 1; i <=100; i++)
+//	{
+//		if (i % 7 == 0&&i%2==0)
+//		{
+//			cout << i << " ";
+//		}
+//	}
+//	cout << endl;
+//	for (int i = 1; i <= 100; i++)
+//	{
+//		if (i % 7 == 0 || i % 2 == 0)
+//		{
+//			cout << i << " ";
+//		}
+//	}
+//
+//	return 0;
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	double ortalama=0;
+//
+//	//Kullanıcında 5 sayı alıp sayı okuypu ortalamsını alan yapı. 
+//	for (int i = 0; i < 5; i++)
+//	{
+//		int okunanDeger;
+//		cout << "sayi giriniz:" << endl;
+//		cin >> okunanDeger;
+//		ortalama += okunanDeger;
+//
+//	
+//	}
+//	ortalama = ortalama / 5;
+//	cout << "ortalama:" << ortalama << endl;
+//
+//	return 0;
+//}
