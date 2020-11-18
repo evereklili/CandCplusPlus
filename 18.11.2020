@@ -1,0 +1,383 @@
+//#include<iostream>
+//#include<string>
+//using namespace std;
+//#define MAX 1000
+//void degistir(char* ch1, char* ch2)
+//{
+//	char tmp = *ch1;
+//	*ch1 = *ch2;
+//	*ch2 = tmp;
+//}
+//
+//int main()
+//{
+//	int n;
+//	char karakterler[MAX];
+//	cin >> n;
+//	for (int i = 0; i < n; ++i)
+//	{
+//		cin >> karakterler[i];
+//	}
+//	karakterler[n] = '\0';
+//	char c1, c2;
+//	for (int i = n; i > 0; --i)
+//	{
+//		for (int j = 1; j < i; ++j)
+//		{
+//			c1 = karakterler[j - 1];
+//			if (c1 >= 'A' && c1 < 'Z')
+//			{
+//				c1 += 32;
+//			}
+//			c2 = karakterler[j];
+//			if (c2 >= 'A' && c2 <= 'Z')
+//			{
+//				c2 +=32;
+//			}
+//			if (c1 > c2)
+//			{
+//				degistir(&karakterler[j - 1], &karakterler[j]);
+//			}
+//		}
+//	}
+//	cout << karakterler << endl;
+//	return 0;
+//}
+//yukarıdaki program ile harfleri sıralamıştır
+
+//
+//#include<iostream>
+//using namespace std;
+//#define MAX 101
+//
+//int main()
+//{
+//	cout << "MATRIS CARPIMI" << endl;
+//	int mat1[MAX][MAX];
+//	int mat2[MAX][MAX];
+//	int carpim[MAX][MAX];
+//	int n1, m1, n2, m2, n3, m3;
+//	//matris boytunu alınız: 
+//	cin >> n1 >> m1 >> n2 >> m2;
+//	//mat1 a1
+//	for (int i = 0; i < n1; i++)
+//	{
+//		for (int j = 0; j <= m1; j++)
+//		{
+//			cin >> mat1[i][j];
+//		}
+//	}
+//
+//	//mat2 a1
+//	for (int i = 0; i < n1; i++)
+//	{
+//		for (int j = 0; j <= m1; j++)
+//		{
+//			cin >> mat2[i][j];
+//		}
+//	}
+//	//çarpılabilinir mi?
+//	if (m1 != n2)
+//	{
+//		cout << -1;
+//		return 0;
+//	}
+//	//çaprım hesaplama
+//	n3 = n1;
+//	m3 = m1;
+//	for (int i = 0; i < n1; i++)
+//	{
+//		for (int j = 0; j <= m2; j++)
+//		{
+//			int tmp = 0;
+//			for (int k = 0; k < m1; ++k)
+//			{
+//				tmp += mat1[i][k] * mat2[k][j];
+//			}
+//			carpim[i][j] = tmp;
+//		}
+//	}
+//	//çarpımı yazdır.
+//	//mat1 a1
+//	for (int i = 0; i < n3; i++)
+//	{
+//		for (int j = 0; j <= m3; j++)
+//		{
+//			cout << carpim[i][j] << " ";
+//		}
+//		cout << endl;
+//	}
+//	return 0;
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int a = 10;
+//	cout << a << endl;
+//	int b = 30;
+//	int c = 20;
+//	int d=0;
+//	cout << a << " " << b << " " << c << " " << d << endl; 
+//	return 1;
+//	 
+//
+////}
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	//int a = 10;
+	//cout << a << endl;
+	//float pi = 3.14;
+	//cout << pi << endl;
+	//long tl = 23421421431;
+	//cout << tl << endl;
+	//char c = 'x';
+	//cout << c << endl;
+	////karakter olarka tanımlananı int çevirebiliri.
+	//int cc = c; //ascii tablosu var. bunun karşılığını dönüştürmektedir. 
+	//int cd = 'd';
+	//cout << cd << endl;
+	//cout << cc << endl;
+	//int ipi = pi;
+	//cout << ipi << endl; //int çevirince direk tam ksımını alır.
+	//float fsayi = ipi;//
+	//cout << fsayi << endl;
+	//int qqqa = 100;
+	//char ccc = qqqa;
+	//cout << ccc << endl;
+
+	//a++; //a sonra yer alır posfix yer alrı.  anın değeri alınıp kullanılır sonra 1 artırılır. 
+	//cout << a << endl;
+
+	//++a; //a önde prefix yer alır. anın değeri artırılır sonra işleme konur.  
+	//cout << a << endl;
+	//cout << a + 20 * 2 << endl;
+	//cout<< 15 % 2 << endl; //15 2 ile bölümünden kalan
+	//a = a - 1; //assignment yani atama yapmaktadır. 
+	//cout << a << endl; 
+	//cout << c++ << endl; // önce kullanılır sonra artılrıç.
+	//cout << c << endl;
+	//int x;
+	///ikili tabandaki kaşrılığı çevril.
+	/// 5=0101 şeklinde çevirebiliriz. 
+	/*int a = 10;
+	cout << a << endl;
+	int b = a;
+	cout << (b << 2) ;
+	cout << (40 >> 3) << endl;
+	cout << (a && b) << endl;*/
+	/*int a;
+	cin >>a;
+	cout << a << endl*/
+
+	//int x;
+	//x = 10+10;
+	//if (x < 20)
+	//{
+	//	//doğru dönerse; 
+	//	cout << x<<"küçük 20 den" << endl;
+	//}
+	//else if(x>20)
+	//{
+	//	cout << x << " sayısı 20 den büyüktür." << endl;
+
+	//}
+	//else
+	//{
+	//	cout<<x <<"sayısı 20 eşittir."<<endl; 
+	//}	
+
+//	int toplam = 0;
+//	int sayi = 0; int okunan = 0;
+//	for (int i = 0; okunan !=- 1; i++)
+//	{
+//		cout << "Bir sayi giriniz:" << endl;
+//		cin >> okunan;
+//		toplam += okunan;//toplam=toplam+okunan;
+//		sayi++; //-1 de bu sayıya giriyor ve toplam dahil ediliyor! 
+//
+//	}
+//	sayi--;
+//	toplam += 1;
+//
+//	cout << "ortalama=" << (double)toplam / sayi << endl;
+//	return 0;
+//	 
+//
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	//ortalama =toplam/sayi;
+//	//accumulator biriktirici
+//	int toplam = 0;
+//	int sayi = 0;
+//	int okunan = 0;
+//	for (;;)
+//	{
+//		cout << "bir sayi giriniz:" << endl;
+//		cin >> okunan;
+//		if (okunan == -1)
+//		{
+//			break;
+//		}
+//		toplam += okunan;
+//		sayi++;
+//	}
+//	cout << "toplam:" << toplam << endl;
+//	cout << "sayi:" << sayi << endl;
+//	cout << "ortalama:" << (float)toplam / sayi << endl;
+//
+//
+//	return 0;
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main() {
+//	int n;
+//	n = 0;
+// 
+//	char c = 'A';
+//	int x = c;
+//	cout << c << "harfinin karşılığı ascii karşılığı:" << x << endl;
+//	for (int i = 65; i < (int)'Z'; i++)
+//	{
+//		for (int j =1; j <=26; j++)
+//		{
+//			cout << (char)i;
+//
+//		}
+//		cout << endl;
+//	}
+//	
+//
+//
+//	return 0;
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int i = 0;
+//	do {
+//		cout << i << endl;
+//		i++;
+//
+//	} while (i < 10);
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	for (int i = 100; i >= 0; i--)
+//	{
+//		if (i %13 == 0)
+//		{
+//			cout << i << endl;
+//		}
+//	}
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int i = 100;
+//	while (i > 0)
+//	{
+//		if (i % 13 == 0)
+//		{
+//			cout << i << endl;
+//		}
+//		i--;
+//	}
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{ 
+//	int i = 15;
+//	int j = 5;
+//	int k = 100;
+//	int l = 2;
+//	while (j < 100)
+//	{
+//		cout << i << "\t" << j << "\t" << k << "\t" << l << endl;
+//		i += 15;
+//		j += 5;
+//		k -= 10;
+//		l*= 2;
+//	}
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int us = 2;
+//	for (int i = 1; i <=6; i++)
+//	{ 
+//		cout << i * 15 << "\t" << 100 - (i - 1) * 10 << "\t" << us << endl;
+//		us *= 2;
+//
+//	}
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	//1,1,2,3,5,8,13,...etc.
+//	//döngülerle anlatılacaktır. 
+//	int a = 1;
+//	int b = 1; int n;
+//	cin >> n;
+//	for (int i=0; i <= n; i++)
+//	{
+//		double c = a + b;
+//		a = b;
+//		b = c;
+//		cout << c << endl;
+//	}
+//}
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	//kullanıcıdan bir sayı alıp verilen sayı kadar sayıyı okuyunuz. Bu sayıların içindeki pozitif, negatif ve sıfırların oranını döndürünüz. 
+//
+//	int n;
+//	cin >> n;
+//	int nn = 0, asals = 0, ssayi = 0;
+//	for (int i = 0; i < n; i++)
+//	{
+//		int g;//gecici döngüğ saysıı
+//		cin >> g;
+//		if (g > 0)
+//		{
+//			asals++;
+//		}
+//		else if (g < 0)
+//		{
+//			nn++;
+//		}
+//		else
+//		{
+//			ssayi++;
+//		}
+//		
+//	}
+//	cout << "pozitifler:" << (float)asals / n << endl;
+//	cout << "negatifler:" << (float)ssayi / n << endl;
+//	cout << "pozitifler:" << (float)nn / n << endl;
+//	return 0;
+//}
