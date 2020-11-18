@@ -1,0 +1,221 @@
+//#include <iostream>
+//
+//using namespace std;
+//
+//int main() {
+//
+//    for (int i = 0; i < 10; i++) {
+//        cout << rand() * 0.001 << endl;
+//    }
+//
+//    return 0;
+//}
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//int main() {
+//
+//    int i = 0;
+//
+//    for (i = 0; i < 10; i++) {
+//        printf("%d\n", rand() * 0.02);
+//    }
+//
+//    return 0;
+//}
+//
+//#include <iostream>
+//#include <ctime>
+//
+//using namespace std;
+//
+//int main() {
+//
+//    srand(time(0));
+//
+//    for (int i = 0; i < 10; i++) {
+//        cout << rand() << endl;
+//    }
+//
+//    return 0;
+//}
+//#include <stdio.h>
+//#include <ctime>
+//#include <stdlib.h>
+//
+//int main() {
+//
+//    int i = 0;
+//
+//    srand(time(0));
+//    int aDizisi[10];
+//
+//    for (i = 0; i < 10; i++) {
+//        aDizisi[i]=rand();
+//    }
+//    for (i = 0; i < 10; i++) {
+//        printf("%d\n ",aDizisi[i]);
+//    }
+//    return 0;
+//}
+
+//#include <iostream>
+//#include <ctime>
+//
+//using namespace std;
+//
+//int main() {
+//
+//    int enFazla = 250, enAz = 100;
+//
+//    srand(time(0));
+//
+//    for (int i = 0; i < 10; i++) {
+//        cout << rand() % (enFazla - enAz + 1) + enAz << endl;
+//    }
+//
+//    return 0;
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int saat, dakika = 0, saniye = 0;
+//	cout << "Saat \t  Dk \t Sn" << endl;
+//	//en dışdaki döngü saattir. 
+//	for (saat = 0; saat <= 24; saat++)
+//	{
+//		//dışdaki döngü :dakika
+//		for (dakika = 0; dakika <= 60; dakika++)
+//		{
+//			//en dışdaki döngü saniye: 
+//			for (saniye = 0; saniye <= 60; saniye++)
+//			{
+//				cout << " " << saat << "\t" << dakika << "\t" << saniye << endl;
+//
+//			}
+//			cout << endl;
+//
+//		}
+//		cout << endl;
+//	}
+//	return 0;
+//
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int i, j;
+//	for (i = 1; i <= 10; i++)
+//	{
+//		for (j = 1; j <= 10; j++)
+//		{
+//			printf(" %d * %d = %d ", j, i, i * j);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int i, j;
+//	for (i = 1; i <= 10; i++)
+//	{
+//		for (j = 1; j <= 10; j++)
+//		{
+//			cout << j << "*" << i <<"="<< i * j <<"\t";
+//		}
+//		cout << endl;
+//	}
+//	return 0;
+//}
+
+//
+//#include<iostream>
+//using namespace std;
+////tablo dizini ilk satırı
+//int main()
+//{
+//	cout << "\t1\t2\t3\t4\t5\t6\t7\t8\t9\t10 \n";
+//	cout << "\t--------------------------------";
+//	cout << "\t--------------------------------" << endl;
+//	//Dışdaki i döngüsü
+//	for (int i = 1; i <= 10; i++)
+//	{
+//		cout << i << "\t"; //tablo desninin sütunu
+//		//içdeki döngü
+//		for(int j=1;j<=10;j++)
+//		{
+//			//diğer satır ve sütunlara çarpım sonucu yazılacak. 
+//			printf("%d\t",i*j);
+//		}// iç döngü sonu
+//		cout << endl;
+//	} //i döngüsü sonu
+//	return 0;
+//
+//
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	for (int i = 6; i > 0; i--)
+//	{
+//		for (int j = i;k>= 1; j++)
+//		{
+//			printf("*");
+//		} //j sonu
+//		printf("\n");
+//	} //i sonu
+//
+//	return 0;
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	for (int i = 6; i > 0; i--)
+//	{
+//		for (int j = 1; j <= 1; j++)
+//		{
+//			cout<<"*";
+//		} //j sonu
+//		cout << endl;
+//	} //i sonu
+//
+//	return 0;
+//}
+//	for (int i = 6; i > 0; i--)
+//	{
+//		for (int j = i;k>= 1; j++)
+//		{
+//			printf("*");
+//		} //j sonu
+//		printf("\n");
+//	} //i sonu
+//
+//	return 0;
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	for (int i = 6; i > 0; i--)
+//	{
+//		for (int j = 1; j <= 1; j++)
+//		{
+//			cout<<"*";
+//		} //j sonu
+//		cout << endl;
+//	} //i sonu
+//
+//	return 0;
+//}
