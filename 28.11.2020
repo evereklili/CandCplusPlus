@@ -1,0 +1,630 @@
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int n, n2;
+//	cin >> n;
+//	n2 = n / 2;//5
+//	for (int i = n2; i > 0; --i)//for(i=5;i>0;i++ 5 defa döngü oluştur. eksilte eksilte. 
+//	{
+//		cout << "*";// 5 tane yan yana 
+//		for (int j = 0; j < i; j++)
+//		{
+//			cout << " "; //j 0 dan başlasın i kadar tek tek artsın diyor. 
+//		 
+//		}
+//		cout << "*" << endl;
+//	}
+//	cout << "*" << endl;
+//	for (int i = 1; i <= n2; i++)
+//	{
+//		cout << "*";
+//		for (int j = 0; j < i; ++j)
+//		{
+//			cout << " ";
+//
+//		}
+//		cout << "*" << endl;
+//
+//	}
+//	return 0;
+//}
+//
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//	//en üst/
+//	cout << "*";
+//	for (int i = 0; i < n - 2; ++i)
+//	{
+//		cout << " ";
+//
+//	}
+//	cout << "*" << endl;
+//
+//	//üst orta
+//	for (int i = 0; i < n / 2 - 1; ++i)
+//	{
+//		cout << "*";
+//		for (int j = 0; j < i; j++)
+//		{
+//			cout << " ";
+//		}
+//		cout << "*";
+//		for (int i = 0; i < n - (i + 2); ++i)
+//		{
+//			cout << " ";
+//
+//		}
+//		cout << "*" << endl;
+//	}
+//	//orta kısım
+//	cout << "*";
+//	for (int i = 0; i < n / 2 - 1; ++i)
+//	{
+//		cout << " ";
+//	}
+//	cout << "*";
+//	for (int i = 0; i < n / 2 - 1; ++i)
+//	{
+//		cout << " ";
+//	}
+//	cout << "*" << endl;
+//
+//	//alt kısım
+//	for (int j = 0; j < n / 2; ++j)
+//	{
+//		cout << "*" << endl;
+//		for (int i = 0; i < n - 2; ++i)
+//		{
+//			cout << " ";
+//		}
+//		cout << "*" << endl;
+//	}
+//
+//	return 0;
+//
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//	cout << "*";
+//	for (int i = 0; i < n - 2; ++i)
+//	{
+//		cout << " ";
+//
+//	}
+//	cout << "*" << endl;
+//	for (int i = 0; i < n - 2; ++i)
+//	{
+//		cout << "*" ;
+//		for (int j = 0; j < i; ++j)
+//		{
+//			cout << " ";
+//		}
+//		cout << "*" ;
+//		for (int j = 0; j < n - 3 - i; ++j)
+//		{
+//			cout << " ";
+//		}
+//		cout << "*" << endl;
+//	}
+//	cout << "*";
+//	for (int i = 0; i < n - 2; ++i)
+//	{
+//		cout << " ";
+//	}
+//	cout << "*" << endl;
+//	
+//
+//	return 0;
+//}
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//	//üst kare 
+//
+//	for (int i = 0; i < n / 2; ++i)
+//	{
+//		cout << "*";
+//	}
+//	cout << endl;// buraya kadar en üste **** çizer. 
+//	for (int i = 0; i < n / 2-1; ++i)
+//	{
+//		cout << "*";
+//		for (int j = 0; j < n / 2 - 1; ++j)
+//		{
+//			cout << " ";
+//		}
+//		cout << "*" << endl;
+//		for (int i = 0; i < n / 2 + 1; ++i)
+//		{
+//			cout << "*";
+//		}
+//		cout << endl;
+//	}
+//	/* Alt çizgiler. */
+//
+//	for (int i = 0; i < n / 2; ++i)
+//	{
+//		cout << "*";
+//		for (int j = 0; j < i; ++j)
+//		{
+//			cout << " ";
+//		}
+//		cout << "*" << endl;
+//	}
+//	return 0;
+//}
+
+
+//#include<iostream>
+//#include<cstring>
+//using namespace std;
+//int main()
+//{
+//	char karakterler[10000], c1, c2; //char tipinde 10000 düzeyinde karakter dizisi ve c1 c2 char tanımlandı. 
+//	int frekanslar[26][26] = { 0 }, uzunluk, maksimum, x, y; //int türünde frakeans [][] dizisi  tanımalndı. 
+//	cin >> karakterler;  // karakter dizini almamız istenmektei.r
+//	uzunluk = strlen(karakterler); //uzunluk int tipinin karakterdizisindeki uzunluğu bularak uzunluğa atamamız istendi. 
+//	for (int i = 0; i <uzunluk - 1; ++i) //int türündeki i=0; i<krakter dizii uzunluğu-1 kadar olunca; i++ olmamız istendi
+//	{
+//		c1 = karakterler[i]; //karakter dizisi ilk 0 elemanı başlamak üzere; c1=karakter[0]
+//		c2 = karakterler[i+1]; //karakter dizisi ilk 0 elemanı başlamak üzere; c1=karakter[1]
+//		++frekanslar[c1 - 'a'][c2 - 'a']; //++frekanslar[c1 karakterini -'a' çıakr][c2-'a'çıkar]
+//	}
+//	maksimum = -1;
+//	x = -1; //assignment yapılmış
+//	y = -1;
+//	for (int i = 0; i < 26; ++i) //i =0; i<26 kadar 
+//	{
+//		for (int j = 0; j < 26; ++j) {
+//			if (frekanslar[i][j] > maksimum)
+//			{
+//				maksimum = frekanslar[i][j];
+//				x = i; y = j;
+//			}
+//
+//		}
+//	}
+//
+//	c1 = x + 'a';
+//	c2 = y + 'a';
+//	cout << c1 << c2 << " " << maksimum << endl;
+//
+//	return 0;
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//	for (int i = 0; i < 2 * n - 1; ++i)
+//	{
+//		for (int j = 0; j < n; ++j)
+//		{
+//			if (j == n - 1) { cout << "*"; 	}
+//			else if(i+j==n-1){ cout << "*"; }
+//			else if(i-n+1==j) { cout << "*"; }
+//			else if(i>=n/2 && i<3*n/2 && j==n/2) { cout << "*"; }
+//			else if(i>=n/2 && i<3*n/2 && i==j) { cout << "*"; }
+//			else if(i>=n/2 && i<3*n/2 && i+j==2*n-2) { cout << "*";  }
+//			else { cout << " ";  }
+//		} 
+//		cout << endl;
+//	}
+//	return 0;
+//}
+//
+//#include<iostream>
+//#include<cstring>
+//using namespace std;
+//int main()
+//{
+//	char kelimeler[1000][1000];
+//	char tmp[1000];
+//	int n;
+//	cin >> n;
+//	for (int i = 0; i < n; ++i)
+//	{
+//		cin >> kelimeler[i];
+//	}
+//	for (int i = n - 1; i < n; --i)
+//	{
+//		for (int j = 0; j < i; ++j)
+//		{
+//			if (strcmp(kelimeler[j], kelimeler[j + 1]) > 0)
+//			{
+//				strncpy_s(tmp, kelimeler[j], 100);
+//				strncpy_s(kelimeler[j], kelimeler[j+1], 100);
+//				strncpy_s(kelimeler[j+1], tmp, 100);
+//				
+//			}
+//		}
+//	}
+//	for (int i = 0; i < n; ++i)
+//	{
+//		cout << kelimeler[i] << endl;
+//	}
+//	return 0;
+//}
+// roma rakamını normal sayıya çeviriyor.
+
+//#include<iostream>
+//#include<cstring>
+//using namespace std;
+//int main()
+//{
+//	int arap, uzunluk, carpan;
+//	char roma[100];
+//	int deger[100];
+//
+//	cin >> roma;
+//	uzunluk = strlen(roma);
+//	for (int i = 0; i < uzunluk; i++)
+//	{
+//
+//		switch (roma[i])
+//		{
+//		case 'I': { deger[i] = 1; break; }
+//		case 'V': { deger[i] = 5; break; }
+//		case 'X': { deger[i] = 10; break; }
+//		case 'L': { deger[i] = 50; break; }
+//		case 'C': { deger[i] = 100; break; }
+//		case 'D': { deger[i] = 500; break; }
+//		case 'M': { deger[i] = 1000; break; }
+//		default: { deger[i] = 0; break; }
+//
+//		}
+//	}
+//	arap = deger[uzunluk - 1];
+//	for (int i = uzunluk - 2; i >= 0; --i)
+//	{
+//		carpan = 1;
+//		for (int j = i + 1; j < uzunluk; ++j)
+//		{
+//			if (deger[i] < deger[j])
+//			{
+//				carpan = -1;
+//				break;
+//			}
+//
+//		}
+//		arap += carpan * deger[i];
+//
+//	}
+//	cout << arap;
+//
+//
+//
+//
+//	return 0;
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int r, s;//değişkenleri tanımladık. 
+//	//amaç pascal üçgenini ouşturmaktır. 8 boyutta. 1 ; 1 1; 1 2 1...etc. 
+//	//dışdaki döngü satır sayısıdır. 
+//	int sutun; 
+//	cin >> sutun; 
+//	for (int i = 0; i <= sutun; i++)
+//	{
+//		s = 1; r = i + 1; //s değişkenine 1 ve r değişkenine for döngüsü içinde değişekn i değişkenini değerinin birfazlasını atadık. 
+//		//içdeki döngü ise sütün sayısını verecek. 
+//		for (int sut = 0; sut <= i; sut++)
+//		{
+//			if (sut > 0)
+//			{
+//				s = s * (r - sut) / sut;  //eğer sutun sıfırdan küçük olduğu müddetçe s=s*(i+1-sut)/sut yap dedik. 
+//				cout << s << " ";
+//			}//sut dongusu sonu
+//		 
+//			//cout << endl; //bir satır atla. 
+//		}//i döngüsübittiği yer
+//		cout<<endl;
+//
+//
+//
+//	}
+//	return 0;
+//}
+//
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	cout << "omerdogu" << endl;
+//	return 0;
+////}
+//
+//#include<stdio.h>
+//#include<stdlib.h>
+//int main()
+//{
+//	int r, s;//değişkenleri tanımladık. 
+//	//amaç pascal üçgenini ouşturmaktır. 8 boyutta. 1 ; 1 1; 1 2 1...etc. 
+//	//dışdaki döngü satır sayısıdır. 
+//	int sutun = 0;
+//	scanf_s("%d", sutun);
+//	for (int i = 0; i <= sutun; i++)
+//	{
+//		s = 1; r = i + 1; //s değişkenine 1 ve r değişkenine for döngüsü içinde değişekn i değişkenini değerinin birfazlasını atadık. 
+//		//içdeki döngü ise sütün sayısını verecek. 
+//		for (int sut = 0; sut <= i; sut++)
+//		{
+//			if (sut > 0)
+//			{
+//				s = s * (r - sut) / sut;  //eğer sutun sıfırdan küçük olduğu müddetçe s=s*(i+1-sut)/sut yap dedik. 
+//				printf_s("%lf",s);
+//			}//sut dongusu sonu
+//
+//			//cout << endl; //bir satır atla. 
+//		}//i döngüsübittiği yer
+//		printf_s("\n");
+//
+//
+//
+//	}
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//int main() {
+//	const int N = 6;
+//	int i, j;
+//	for (i = 0; i < N; i++)
+//	{
+//		for (j = 0; j <= 2 * N + 1; j++)
+//		{
+//			if (j<N - i || j>N + i)
+//			{
+//				printf("*");
+//
+//			}
+//			else
+//			{
+//				printf("$");
+//
+//			}
+//			
+//		}printf("\n");
+//	}
+//	return 1;
+//}
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int sayi, asal = 5, i, j;
+//	printf("7 den buyuk bir sayi giriniz:");
+//	scanf_s("%d", &sayi);
+//	printf("1,2,3,3,7");
+//	for (i = 7; i <= sayi; i += 2)
+//	{
+//		if (i % 3 != 0 && i % 5 != 0 && i % 7 != 7)
+//		{
+//			asal++;
+//			printf_s("%d;", i);
+//		}
+//	}
+//	printf_s(" \n Asal Sayi Adedi...:%d", asal);
+//	return 0;
+//}
+//
+//#include<stdio.h>
+//double fonksiyon(int x);
+//int main()
+//{
+//	printf(" Seri terimini giriniz:\n");
+//	int n = 0;
+//	scanf_s("%d", &n);
+//	printf("%f", fonksiyon(n));
+//	
+//	
+//	return 0;
+//}
+//double fonksiyon(int x)
+//{
+//	int xx = x;
+//	double st=0;
+//	for (int i = 1; i <= xx; i++)
+//	{
+//		st = st + (double)1.0 /(double)i;
+//		printf("%f \n", st);
+//
+//	}
+//
+//	return st;
+//}
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int n; float st = 0.0;
+//	printf_s("Terim sayisini giriniz:");
+//	scanf_s("%d", &n);
+//	for (int i = 1; i <= n; i++)
+//	{
+//		st = st + 1.0 / i;
+//
+//	}
+//	printf_s("toplami:%f", st);
+//	return 0;
+//
+//}
+//
+//#include<iostream>
+//using namespace std;
+//double fonksiyon(int xx)
+//{
+//	float s = 0;
+//	int sgn = +1; //işaret değişkeni; //çok farklı bir bakış açısı;
+//	int n = xx;
+//	for (int x = 1; x <= n; x++)
+//	{
+//		s = s + (1.0 / x) * sgn;
+//		sgn = -sgn;
+//	}
+//	return s;
+//}
+//int main()
+//{
+//	
+//	int n; //terim sayısı
+//	cout << "Terim Sayisi:" << endl;
+//	cin >> n;
+//	
+//	cout << "Toplam:" << fonksiyon(n) << endl;
+//	return 0;
+//
+//}
+
+//#include<iostream>
+//using namespace std;
+//class Sinifim {
+//public:
+//	int s = 0;
+//	double 	fonksiyon(int a)
+//	{
+//
+//		s = a;
+//			 
+//		return s;
+//	}
+//};
+//int main()
+//{
+//	Sinifim x;
+//	cout<<x.fonksiyon(2); 
+//
+//}
+
+//#include<iostream>
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<cmath>
+//using namespace std;
+//class Sinifim {
+//public:
+//
+//	double fonksiyon(int k=0)
+//	{
+//		float st = 1;
+//		int n=k, Payda = 1;
+//		cout << "Terim sayisini giriniz:" << endl;
+//		cin >> n;
+//		for (int x = 2; x <= n; x++)
+//		{
+//			Payda = Payda * 2;
+//			st = st + 1.0 / Payda;
+//
+//
+//		}
+//		cout << "Toplam:" << st;
+//
+//		return st;
+//
+//	}
+// 
+//
+//};
+//int main()
+//{
+//
+//	Sinifim nesne;
+//	nesne.fonksiyon();
+//
+//	return 0;
+//
+//
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	float st = 0;
+//	int n, f = 1;
+//	cout << "Terim Sayisi:";
+//	cin >> n;
+//	for (int x = 1;x <= n; x++)
+//	{
+//		f = f * x;
+//		st = st + (1.0 / f);
+//	}
+//	cout << "Toplam:" << st << endl;
+//	return 0;
+//}
+
+// //st=x+x^2+x^3+....+x^n seri toplamını bulan programı yazınız. 
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<math.h>
+//int main()
+//{
+//	float st = 0;
+//	int x, n;
+//	printf("x.:");
+//	scanf_s("%d", &x);
+//	printf("Terim Sayisi:");
+//	scanf_s("%d", &n);
+//	for (int us = 1; us <= n; us++)
+//	{
+//		st = st + pow(x, us);
+//	}
+//	printf("Toplamları:%f:", st);
+//	return 0;
+//}
+//
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<math.h>
+//int Fakt(int x);
+//int main()
+//{
+//	int us, x;
+//	int n = 13;//seri terim sayısı; 
+//	double exx=0;
+//	printf("x.:");
+//	scanf_s("%d", &x);
+//	printf("Terim Sayisi:%d \n", n);
+//	printf("Taylor Serisi..:\n");
+//	for (us = 1; us < n; us++)
+//	{
+//		exx = exx + pow(x, us) / Fakt(us);
+//		printf("%f\n", exx);
+//	}
+//	printf("Toplami: %f:", exx); //ex i yaz. 
+//	return 0;
+//
+//}
+//
+//int Fakt(int x)
+//{
+//	int i, f = 1;
+//	for (i = x; i >= 1; i--)
+//	{
+//		f = f * i;
+//		
+//	}
+//	return f;
+//}
