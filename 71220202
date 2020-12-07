@@ -1,0 +1,874 @@
+//#include<stdlib.h>
+//#include<studio.h>
+//void Kitap()
+//{
+//	printf("Yazar: Omer DOGU \n");
+//	printf("Kitap: C VE C PLUS PLUS GIRISI");
+//}
+//int main()
+//{
+//	Kitap();
+//	return 0;
+//}
+
+//
+//#include<iostream>
+//#include<stdio.h>
+//void Kitap()
+//{
+//	printf("Yazar: Omer DOGU \n");
+//	printf("Kitap: C VE C PLUS PLUS GIRISI");
+//}
+//int main()
+//{
+//	Kitap();
+//	return 0;
+//}
+ //1 den 100 kadar olan sayılar sırsıyal ekran yazdırılacaktır. Fakat progra; eğer 3 veya 3 katıysa, sayı yerine "Fizz" ve 5 ve 5 katı ise sayı yerine "Buzz" yazdıracaktır eğer hem 3 hem de 5 katı ise "FizzBuzz" yazdıracaktır. 
+//#include<iostream>
+//using namespace std;
+//void fizzBuzz() {
+//	for (int x = 1; x <= 100; x++)
+//	{
+//		if (x % 15 == 0) { cout << "FizzBuzz \t";  }
+//		else if (x % 5 == 0) { cout << "Buzz \t" ; }
+//		else if (x % 3 == 0) { cout << "Fizz \t" ; }
+//		else
+//		{
+//			cout << x << "\t";
+//		}
+//		 
+//	}
+//}
+//int main()
+//{
+//	fizzBuzz();
+//	return 0;
+//}
+////c=(f-32)/1.8; kodlayızn. 
+//#include<stdio.h>
+//#include<stdlib.h>
+//double cevir(double n)
+//{
+//	return ((n - 32) / 1.8);
+//}
+//
+//int main()
+//{
+//	int F; double C; 
+//	printf("Fahrenayt Degeri...:");
+//	scanf_s("%d", &F);
+//	C = cevir(F);
+//	printf("%g derecedir.",C);
+//	return 0; 
+//	
+//}
+
+//Klavyeden girilen sayının çift mi tek mi olduğunu söyleyen fonksiyonu programın yazınz. 
+//#include<iostream>
+//using namespace std;
+//void karar(int);
+//int main()
+//{
+//	int b;
+//	cout << "Bir sayı giriniz:" << endl;
+//	cin >> b;
+//	karar(b);
+//	return 0;
+//}
+//
+//void karar(int y)
+//{
+//	if ((y % 2) == 0)
+//	{
+//		cout << "Cifttir." << endl;
+//	}
+//	else
+//	{
+//		cout << "Tektir." << endl;
+//	}
+//}
+
+////ana programdan girilen iki sayının küçük ve büyük ayrı ayrı hesaplayan fonksiyonlaırn prototipleri ile yazınız. 
+//#include<stdio.h>
+//#include<stdlib.h>
+//int enk(int, int);
+//int enb(int, int);
+//int main()
+//{
+//	int a=9, b=0;
+//	printf("Birinci sayiyi giriniz:");
+//	scanf_s("%d",&a);
+//	printf("Ikinci sayiyi giriniz:");
+//	scanf_s("%d",&b);
+//	printf("\n En buyuk Sayi:%d", enb(a, b));
+//	printf("\n En kucuk Sayi:%d", enk(a, b));
+//	return 0;
+//}
+//
+//int enk(int x, int y)
+//{
+//	if (x < y)
+//	{
+//		return x;
+//
+//	}
+//	else if (y < x)
+//	{
+//
+//		return y;
+//
+//	}
+//	else
+//	{
+//		return 0;
+//	}
+//		
+//}
+//int enb(int x, int y)
+//{
+//	if (x > y)
+//	{
+//		return x; 
+//	}
+//	else if (y > x)
+//	{
+//		return y; 
+//
+//	}
+//	else
+//	{
+//		return 0;
+//	}
+//}
+//
+//#include<iostream>
+//using namespace std;
+//int s1 = 4; //global  variable 
+////referans ile katarım(pass by reference=)
+//void RefFonk(int& s1)
+//{
+//	s1 = 8; 
+//
+//}
+//void DegFonk(int s1)
+//{
+//	s1 = 8;
+//}
+//
+////ana fonksiyon
+//int main()
+//{
+//	cout << "Degeri al ve isle:" << endl;
+//	DegFonk(s1);
+//	cout << "\n s1...:" << s1 << endl;
+//	cout << "Referans al isle" << endl; 
+//	RefFonk(s1);
+//	cout << "\n s1...:" << s1 << endl; 
+//	return 0;
+//}
+// yukarıdaki c++ geçerlidir. 
+
+//
+//#include<stdio.h>
+//#include<stdlib.h>
+//int s1 = 4; //global  variable 
+////referans ile katarım(pass by reference=)
+//void RefFonk(int *s1)
+//{
+//	*s1 = 8;
+//
+//}
+//void DegFonk(int s1)
+//{
+//	s1 = 8;
+//}
+//
+////ana fonksiyon
+//int main()
+//{
+//	printf("Degeri al ve isle:");
+//	DegFonk(s1);
+//	printf("\n s1...:%d \n", s1);
+//	printf("Referans al isle");
+//	RefFonk(&s1);
+//	printf("\n s1...:%d", s1);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<ctype.h>
+//#include<conio.h>
+//#include <iostream>
+//void menu(); 
+//double Hesapla(int, int, int);
+//
+//int main()
+//{
+//	int a, b, islem;
+//	char cvp;
+//	double sonuc; 
+//	do
+//	{
+//		menu();
+//		printf("\n iki sayi giriniz arasinda virgul olsun.:\n");
+//		scanf_s("%d,%d", &a, &b);
+//		printf("\Islem sec..:\n");
+//		scanf_s("%d", &islem);
+//		sonuc = Hesapla(a, b, islem);
+//		printf("%g", sonuc);
+//		printf("\n Devam etmek ister misiniz?[e,h]");
+//		std::cin >> cvp; //basılan tuşu al; 
+//
+//
+//	} while (tolower(cvp) == 'e'); //e ise veya E ise devam et. 
+//	return 0;
+//
+//}
+//
+//void menu() {
+//	printf("\n [1] Toplama:\n");
+//	printf("\n [2] Cikarma:\n");
+//	printf("\n [3] Carpma:\n");
+//	printf("\n [4] Bolme:\n");
+//}
+//
+//double Hesapla(int a, int b, int op)
+//{
+//	
+//	switch (op)
+//	{
+//	case 1: { return a + b; break;  }
+//	case 2: { return a - b; break;  }
+//	case 3: { return a * b; break;  }
+//	case 4: { return a / b; break;  }
+//	}
+//}
+
+
+//#include<stdio.h>
+//#include<stdlib.h>
+//int git()
+//{
+//	static int a = 9; //static yerel değişken; 
+//	a += 5;
+//	return a; 
+//}
+//int main()
+//{
+//	int b; b = git(); //git fonksiyonu çağrılır. 
+//	printf("\n b..:%d", b);
+//	
+//	for (int i = 0; i <= 10; i++)
+//	{
+//		b = git();
+//		printf("\n b..:%d", b);
+//	}
+//	return 0; 
+//
+//}
+//
+//b..:14
+//b.. : 19
+//b.. : 24
+//b.. : 29
+//b.. : 34
+//b.. : 39
+//b.. : 44
+//b.. : 49
+//b.. : 54
+//b.. : 59
+//b.. : 64
+//b.. : 69
+//C : \Users\omdog\source\repos\OMERDOGU_CPP\Debug\OMERDOGU_CPP.exe(process 11732) exited with code 0.
+//Press any key to close this window . . .
+
+
+//#include<iostream>
+//using namespace std; 
+//int faktoriyel(int n)
+//{
+//	if (n <= 1) {
+//		return n; 
+//	}
+//	else
+//	{
+//		return n * (faktoriyel(n - 1));
+//	}
+//}
+//
+//int main()
+//{
+//	int n; 
+//	cout << "Faktoriyeli alinacak sayiyi girinizi:";
+//	cin >> n;
+//	cout << n << "!=" << faktoriyel(n) << endl; 
+//	return 0;
+//}
+
+//#include<stdio.h>
+//#include<stdlib.h>
+//int fib(int n); //prototip fonksiyondur. 
+//
+//int main()
+//{
+//	int a;
+//	printf("Kacinci eleman..:");
+//	scanf_s("%d", &a);
+//	printf("%d.elaman: %d", a, fib(a));
+//	return 0;
+//}
+//
+//int fib(int n)
+//{
+//	int fb; 
+//	if (n <= 1)
+//	{
+//		return n;
+//	}
+//	else
+//	{
+//		return fib(n - 1) + fib(n - 1);
+//	}
+//}
+
+//#include<iostream>
+//using namespace std;
+//double ackerm(int m, int n) {
+//	if (m == 0) //m=0 ise
+//	{
+//		return n + 1;
+//
+//	}
+//	else if (n == 0)
+//	{
+//		return ackerm(m - 1, n);
+//	
+//	}
+//	else
+//	{
+//		return ackerm(m - 1, ackerm(m, n - 1));
+//		
+//	}
+//}
+//
+//int main() {
+//	int m, n;
+//	cout << "m="; 
+//	cin >> m;
+//	cout << "n=";
+//	cin >> n;
+//	cout << "A(" << m << "," << n << ")=" << ackerm(m, n) << endl;
+//	return 0;
+//
+//}
+
+
+//#include<iostream>
+//#include<cstdlib>
+//#include<ctime>
+//using namespace std;
+//int cifteler(int s1, int s2)
+//{
+//	int i, sayac = 0;
+//	cout << "1.sayi..:" << s1 << endl;
+//	cout << "2.sayi..:" << s2 << endl;
+//	cout << "Cift Sayilar:" << endl;
+//	if (s1 % 2 == 0)
+//	{
+//		for (i = s1; i <= s2; i += 2)
+//		{
+//			printf("%d", i);
+//				sayac++;
+//
+//		}
+//	}
+//	return sayac;
+//}
+//int main()
+//{
+//	srand(time(0));
+//	int a, b, bos;
+//	a = rand() % 100;
+//	b = rand() % 100;
+//	if (a > b)
+//	{
+//		bos = a; a = b; b = bos;
+//		
+//	}
+//	cout << "\n Adet.:" << cifteler(a, b);
+//	cout << "\nAdedi.:" << cifteler(a, b);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<time.h>
+//static int tut; 
+//void tahmin(int a)
+//{
+//	int tahmin, sayac = 0, puan = 100;
+//	do 
+//	{
+//		scanf_s("%d", &tahmin);
+//		sayac++;
+//		if (tahmin == a)
+//		{
+//			printf("Bravo! %d tahinde %d sayisini bildiriminiz \n", sayac, tut);
+//		}
+//		else if (tahmin < a)
+//		{
+//			printf("Daha büyük bir sayı giriniz!\n");
+//		}
+//		else
+//		{
+//			printf("Daha küçük giriniz!\n");
+//			puan -= 10;
+//		}
+//	} while (tahmin != a);
+//}
+//
+//int main()
+//{
+//
+//	srand(time(0));
+//	tut = (1 + (int)rand() % 100);
+//	tahmin(tut);
+//	return 0;
+//}
+//#include<iostream>
+//#include<cstdlib>
+//#include<ctime>
+//using namespace std;
+////zar fonksiyonu
+//void zarAt(int N)
+//{
+//	int bir = 0, iki = 0, uc = 0, dort = 0, bes = 0, alti = 0;
+//	for (int i = 0; i < N; i++)
+//	{
+//		int sayi = 1 + (int)(rand() % 6);
+//		if (sayi == 1) { bir++; }
+//		if (sayi == 2) { iki++;  }
+//		if (sayi == 3) { uc++;  }
+//		if (sayi == 4) { dort++;  }
+//		if (sayi == 5) { bes++;  }
+//		if (sayi == 6) { alti++;  }
+//
+//	}
+//	cout << "1\t" << bir << " \t kez \n"; 
+//	cout << "2\t" << iki << " \t kez \n";
+//	cout << "3\t" << uc << " \t kez \n";
+//	cout << "4\t" << dort << " \t kez \n";
+//	cout << "5\t" << bes << " \t kez \n";
+//	cout << "6\t" << alti << " \t kez \n";
+//
+//}
+//int main()
+//{
+//	int N;
+//	cout << "Tekrar sayisi..:\n";
+//	cin >> N;
+//	zarAt(N);
+//	return 0;
+//}
+//
+//#include<stdlib.h>
+//#include<stdio.h>
+//#include<math.h>
+//int signum(int X)
+//{
+//	return (X < 0 ? -1 : X>0 ? +1 : 0);
+//}
+//double toDegree(int X)
+//{
+//	return X * (180 / M_PI);
+//}
+//double toRadians(int X)
+//{
+//	return X * (M_PI / 180);
+//}
+//
+//
+//
+//int main()
+//{
+//	printf("%d \n ", signum(6)); //1;
+//	printf("%g\n", toDegree(1));
+//
+//}
+
+// 
+//#include<iostream>
+//
+//using namespace std;
+//
+//// Function declaration
+//int getGallons(int wall);
+//int getHours(int gallons);
+//int getCostpaint(int gallons, int pricePaint);
+//int getLaborcharges(int hours);
+//int getTotalcost(int costPaint, int laborCharges);
+//
+//// Function definition
+//int getGallons(int wall)
+//{
+//    int gallons;
+//
+//    gallons = wall / 112;
+//
+//    cout << "Number of gallons of paint required: " << gallons << endl;
+//    return gallons;
+//}
+//
+//// Function definition
+//int getHours(int gallons)
+//{
+//    int hours;
+//
+//    hours = gallons * 8;
+//
+//    cout << "Hours of labor required: " << hours << endl;
+//    return hours;
+//}
+//
+//// Function definition
+//int getCostpaint(int gallons, int pricePaint)
+//{
+//    int costPaint;
+//
+//    costPaint = gallons * pricePaint;
+//
+//    cout << "The cost of paint: " << costPaint << endl;
+//    return costPaint;
+//}
+//
+//// Function definition
+//int getLaborcharges(int hours)
+//{
+//    int laborCharges;
+//
+//    laborCharges = hours * 35;
+//
+//    cout << "The labor charge: " << laborCharges << endl;
+//    return laborCharges;
+//}
+//
+//// Funtion definition
+//int getTotalcost(int costPaint, int laborCharges)
+//{
+//    int totalCost;
+//
+//    totalCost = costPaint + laborCharges;
+//
+//    cout << "The total cost of the job: " << totalCost << endl;
+//    return totalCost;
+//}
+//
+//// The main method
+//int main()
+//{
+//    int wall;
+//    int pricePaint;
+//
+//    cout << "Enter square feet of wall: ";
+//    cin >> wall;
+//
+//    cout << "Enter price of paint per gallon: ";
+//    cin >> pricePaint;
+//
+//    int costPaint = getCostpaint(getGallons(wall), pricePaint);
+//    int laborCharges = getLaborcharges(getHours(getGallons(wall)));
+//    getTotalcost(costPaint, laborCharges);
+//
+//    return 0;
+//
+//}
+
+//#include<stdio.h>
+//#include<stdlib.h>
+//int main()
+//{
+//	int i;
+//	int A[9];
+//	for (i = 0; i < 9; i++)
+//	{
+//		A[i] = i;
+//		printf("%d \n", A[i]);
+//
+//	}
+//
+//	return 0;
+//}
+
+//#include<iostream>
+// 
+//int main()
+//{
+//	int i;
+//	int A[9];
+//	for (i = 0; i < 9; i++)
+//	{
+//		A[i] = i;
+//		std::cout<<A[i]<<std::endl;
+//
+//	}
+//
+//	return 0;
+//}
+//
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int i, Z[10];
+//	for (i = 0; i < 10; i++)
+//	{
+//		Z[i] = i * i;
+//		cout << Z[i] << endl; 
+//	}
+//	return 0;
+//}
+
+//#include<stdio.h>
+//#include<stdlib.h>
+//int main()
+//{
+//	int i, z[12];
+//	for (i = 0; i < 12; i++)
+//	{
+//		if (i < 6)
+//		{
+//			z[i] = i; 
+//		}
+//		else
+//		{
+//			z[i] = 11 - i;
+//	
+//		}
+//
+//		printf("%d ", z[i]);
+//	}
+//	return 0;
+//}
+//
+//#include<iostream>
+//#include<stdlib.h>
+//using namespace std;
+//int main()
+//{
+//	int i, z[12];
+//	for (i = 0; i < 12; i++)
+//	{
+//		if (i < 6)
+//		{
+//			z[i] = i;
+//			cout << z[i] << endl;
+//		}
+//		else
+//		{
+//			z[i] = 11-i;
+//			cout << z[i] << endl;
+//		}
+//	}
+//	return 0;
+//}
+//
+//#include<stdio.h>
+//#include<stdlib.h>
+//int main()
+//{
+//	int Oylar[]={20, 13, 5, 3, 19, 22, 25};
+//	int enb = Oylar[0];
+//	int adayNo = 1; //muhtar aday numarası;
+//	for (int i = 1; i < 7; i++)
+//	{
+//		if (Oylar[i] > enb)
+//		{
+//			adayNo = i + 1;
+//			enb = Oylar[i];
+//		}
+//
+//	}
+//	printf("En çok oyu alan: %d. aday", adayNo);
+//	printf("\n Oy sayısı..:%d ", enb);
+//	return 0;
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int A[5]; 
+//	int i, rakam; 
+//	for (i = 0; i < 5; i++)
+//	{
+//		cout << i + 1 << ".sayi..:";
+//		cin >> rakam;
+//		A[i] = rakam;
+//	}
+//	cout << "A dizisi..:\n";
+//	for (i = 0; i < 5; i++)
+//	{
+//		cout << "A[" << i << "]=" << A[i] << endl;
+//	}
+//	return 0;
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	string A[] = { "", "Ocak","Subat","Mart","Nisan","Mayis","Haziran","Temmuz","Agustos","Eylul","Ekim","Kasim","Aralik" };
+//	int ay;
+//	cout << "Ay degerini giriniz: \n";
+//	cin >> ay;
+//	if (ay > 0 && ay <= 12)
+//	{
+//		cout << ay << ".ay..:" << A[ay] << endl;
+//		
+//	}
+//	else
+//	{
+//		cout << "hatali numara";
+//
+//	}
+//	return 0;
+//}
+
+//#include<iostream>
+// 
+//#include <time.h>
+//using namespace std;
+//int main()
+//{
+//	int  N, i, Toplam = 0;
+//	srand(time(0));
+//	cout << "Dizi boyutunu giriniz: \n";
+//	cin >> N;
+//	int A[N];
+//	for (i = 0; i < N; i++)
+//	{
+//		A[i] = 1 + rand() % 100;
+//		cout << i << ".eleman " << A[i] << endl;
+//		Toplam = Toplam + A[i];
+//
+//	}
+//	cout << "Toplam=" << Toplam << endl;
+//	return 0;
+//}
+
+//konsolden girilen para miktarını en az kaç para küpur ile ödeneceğini hesaplayan programı bulunuz. 
+//#include<stdio.h>
+//#include<stdlib.h>
+//int main()
+//{
+//	int para, sa, i;
+//	int K[] = { 200,100,50,20,10,5,1 };
+//	printf("Para miktarını giriniz:");
+//	scanf_s("%d", &para);
+//	for (i = 0; i <= 6; i++)
+//	{
+//		sa = (int)para / K[i];
+//		para = para - sa * K[i];
+//		if (sa != 0)
+//		{
+//			printf("%d %s  %d %s \n", sa, "adet", K[i], "TL");
+//
+//		}
+//	}
+//	printf("vermelisiniz.");
+//	return 0;
+//
+//}
+//15 KİŞİLİK notun girieln kişilerin geçtiğini ve kkadlığnıı veren kişi sayısıı veren programı yaz. 
+//#include<iostream>
+//#include<cstdlib>
+//#include<ctime>
+//using namespace std;
+//const int mevcut = 15;
+//void notlariAl(int* Nt)
+//{
+//	srand(time(0));
+//	int i;
+//	for (i = 0; i < mevcut; i++)
+//	{
+//		Nt[i] = 1 + rand() % 100;
+//		printf("%d,", Nt[i]);
+//
+//	}
+//}
+//
+//int main()
+//{
+//	cout << "___________Ders Başarı Durumu Sınıfca__________________";
+//	int i, kalan = 0, progNot[mevcut];
+//	int gNot = 50;
+//	cout << "\n Notlar:";
+//	notlariAl(progNot);
+//	for (i = 0; i < mevcut; i++)
+//	{
+//		if (progNot[i] < gNot)
+//		{
+//			kalan++;
+//		}
+//
+//	}
+//	cout << "\n Kalan sayisi:" << kalan;
+//	cout << "\n Gecen Sayisi:" << mevcut - kalan << endl;
+//	return 0;
+//}
+
+//#include<stdio.h>
+//#include<stdlib.h>
+//
+//int main()
+//{
+//	int i, j, aa = 0, bb = 0, bayrak;
+//	int a[100], b[100];
+//	for (i = 2; i <= 100; i++)
+//	{
+//		bayrak = 1;
+//		for (j = 2; j < i; j++)
+//		{
+//			if (i % j == 0)
+//			{
+//				bayrak = 0;
+//			}
+//
+//		}
+//		if (bayrak == 1)
+//		{
+//			a[aa] = i;
+//			aa++;
+//		}
+//		else
+//		{
+//			b[bb] = i;
+//			bb++;
+//		}
+//
+//	}
+//	printf("Asal Sayilar..:\n");
+//	for (i = 0; i < aa; i++)
+//	{
+//		printf("%d \t", a[i]);
+//	}
+//	printf("\n Asal Olmayan Sayilar..:\n");
+//	for (i = 0; i < bb; i++)
+//	{
+//		printf("%d \t", b[i]);
+//	}
+//}
+
+
+/*
+
+Asal Sayilar..:
+2       3       5       7       11      13      17      19      23      29      31      37      41      43      47     53       59      61      67      71      73      79      83      89      97
+ Asal Olmayan Sayilar..:
+4       6       8       9       10      12      14      15      16      18      20      21      22      24      25     26       27      28      30      32      33      34      35      36      38      39      40      42      44      45     46       48      49      50      51      52      54      55      56      57      58      60      62      63      64     65       66      68      69      70      72      74      75      76      77      78      80      81      82      84     85       86      87      88      90      91      92      93      94      95      96      98      99      100
+C:\Users\omdog\source\repos\OMERDOGU_CPP\Debug\OMERDOGU_CPP.exe (process 9144) exited with code 0.
+Press any key to close this window . . .
+
+*/
