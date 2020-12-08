@@ -1,0 +1,700 @@
+// sum the numbers from 50 to 100 (use while)
+
+//#include <iostream>
+//
+//auto sum(int lo, int hi)
+//{
+//    int sum = 0;
+//    while (lo <= hi) { sum += lo++; }
+//    return sum;
+//}
+//
+//int main()
+//{
+//    std::cout << "Sum of 50 to 100 inclusive is: " << sum(50, 100) << std::endl;
+//    return 0;
+//}
+
+////15 elemanlı yani 3 satır ve 5 sutundan oluşan bir int tipindeki B dizisine başlangıç değeri atayan ve bu değerleri ekranda göstgeren programı kodlayınız. 
+//#include<stdio.h>
+//#include<stdlib.h>
+//int main()
+//{
+//	int B[3][5] = { {8,1,23,22,2},{1,2,3,4,5},{0,3,269,25,54} };
+//	int i, j;
+//	for (i = 0; i < 3; i++)
+//	{
+//		for (j = 0; j < 5; j++)
+//		{
+//			printf("%d ", B[i][j]);
+//		}
+//		printf("\n");
+//	}
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//	//üst kare
+//	for (int i = 0; i < n / 2 + 1; i++)
+//	{
+//		cout << "*";
+//	}
+//	cout << endl;
+//	for (int i = 0; i < n / 2 - 1; ++i)
+//	{
+//		cout << "*";
+//		for (int j = 0; j < n / 2 - 1; ++j) 
+//		{
+//			cout << " ";
+//		}
+//		cout << "*" << endl;
+//	}
+//	for (int i = 0; i < n / 2; ++i)
+//	{
+//		cout << "*";
+//	}
+//	cout << endl;
+//	//altçizgiler. 
+//	for (int i = 0; i < n / 2; ++i)
+//	{
+//		cout << "*";
+//		for (int j = 0; j < i; ++j)
+//		{
+//			cout << " ";
+//		}
+//		cout << "*" << endl;
+//	}
+//	return 0;
+//}
+ 
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//	for (int i = 0; i < n / 2; ++i)
+//	{
+//		for (int j = 0; j < i; ++j)
+//		{
+//			cout << " ";
+//
+//		}
+//		cout << "*";
+//		for (int j = 0; j < n - (i + 1) * 2; ++j)
+//		{
+//			cout << " ";
+//		}
+//		cout << "*" << endl;
+//	}
+//
+//	//////////////////////
+//	for (int i = 0; i < n / 2; ++i)
+//	{
+//		cout << " ";
+//
+//	}
+//	cout << "*"<< endl;
+//	for (int i = n / 2 - 1; i >= 0; --i)
+//	{
+//		for (int j = 0; j <i; ++j)
+//		{
+//			cout << " ";
+//		}
+//		cout << "*";
+//		for (int j = 0; j < n - (i + 1); ++j)
+//		{
+//			cout << " ";
+//		}
+//		cout << "*" << endl;
+//
+//	}
+//
+//	return 0;
+//
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//	for (int i = 0; i < 2 * n - 1; ++i)
+//	{
+//		for (int j = 0; j < n; ++j)
+//		{
+//			if (j == n - 1)
+//			{
+//				cout << "*";
+//			}
+//			else if (i + j == n - 1)
+//			{
+//				cout << "*";
+//			}
+//			else if (i - n +1== j)
+//			{
+//				cout << "*";
+//			}
+//			else if (i >= n / 2 && i < 3 * n / 2 && j == n / 2)
+//			{
+//				cout << "*";
+//			}
+//			else if (i >= n / 2 && i < 3 * n / 2 && i == j)
+//			{
+//				cout << "*";
+//			}
+//			else if (i >= n / 2 && i < 3 * n / 2 && i + j == 2 * n - 2)
+//			{
+//				cout << "*";
+//			}
+//			else
+//			{
+//				cout << " ";
+//			}
+//		}
+//		cout << endl;
+//	}
+//	return 0;
+//	
+//}
+
+//
+//#include<iostream>
+//#include<cstring>
+//using namespace std;
+//
+//int main()
+//{
+//	char kelimeler[1000][1000];
+//	char tmp[100];
+//	int n; cin >> n;
+//	for (int i = 0; i < n; ++i)
+//	{
+//		cin >> kelimeler[i];
+//	}
+//	for(int i=n-1;i>0;--i)
+//	{
+//		for (int j = 0; j < i; ++j)
+//		{
+//			if (strcmp(kelimeler[j], kelimeler[j + 1]) > 0)
+//			{
+//				strncpy(tmp, kelimeler[j], 100);
+//				strncpy(kelimeler[j], kelimeler[j + 1], 100);
+//				strncpy(kelimeler[j + 1], tmp, 100);
+//			}
+//		}
+//		
+//	}
+//	for (int i = 0; i < n; ++i)
+//	{
+//		cout << kelimeler[i] << endl;
+//
+//	}
+//	return 0;
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int atis_1, atis_2, atis_sayisi = 0, puan = 0;
+//	int kuka_sayisi[22];
+//	//atış al
+//	for (int i = 0; i < 10; ++i)
+//	{
+//		cin >> atis_1;
+//		kuka_sayisi[atis_sayisi++] = atis_1;
+//		if (atis_1 != 10)
+//		{
+//			cin >> atis_2;
+//			kuka_sayisi[atis_sayisi++] = atis_2;
+//		}
+//		if (atis_1 == 10 && i == 9)
+//		{
+//			cin >> atis_1;
+//			kuka_sayisi[atis_sayisi++] = atis_1;
+//			cin >> atis_2;
+//			kuka_sayisi[atis_sayisi++] = atis_2;
+//		}
+//		else if (atis_1 + atis_2 == 10 && i == 9)
+//		{
+//			cin >> atis_1;
+//			kuka_sayisi[atis_sayisi++] = atis_1;
+//		}
+//	}
+//	//puan hesaplama kısmı
+//	bool strike, spare;
+//	for (int i = 0, j = 0; i < 10; ++i)
+//	{
+//		strike = false;
+//		spare = false;
+//		if (kuka_sayisi[j] == 10)
+//		{
+//			puan += kuka_sayisi[j] + kuka_sayisi[j + 1] + kuka_sayisi[j + 3];
+//			j += 1; strike = true;
+//		}
+//		else if (kuka_sayisi[j] + kuka_sayisi[j + 1] == 10)
+//		{
+//			puan += kuka_sayisi[j] + kuka_sayisi[j + 1] + kuka_sayisi[j + 2];
+//			j += 2;
+//			spare = true;
+//		}
+//		else
+//		{
+//			puan += kuka_sayisi[j] + kuka_sayisi[j + 1];
+//			j += 2;
+//		}
+//	}
+//	cout << puan;
+//	
+//	return 0;
+//}
+//
+//#include<iostream>
+//#include<iomanip>
+//#include<cmath>
+//using namespace std;
+//
+//struct nokta {
+//	int x, y;
+//
+//};
+//void bilgileri_al(struct nokta* n)
+//{
+//	/* n yapısı işaretçi dğeişken olduğunda üye değişkenlerine this operatörü (->) ile ulaşılır. */
+//	cin >> n->x >> n->y;
+//
+//}
+//
+//double uzaklik_hesapla(struct nokta* n1, struct nokta* n2)
+//{
+//	int x_fark = abs(n1->x - n2->x);
+//	int y_fark = abs(n1->y - n1->y);
+//	return sqrt(pow(x_fark, 2) + pow(y_fark, 2));
+//
+//}
+//
+//int main()
+//{
+//	struct nokta nokta1, nokta2;
+//	cout << "1. nokta koordinatini giriniz:";
+//	bilgileri_al(&nokta1);
+//	cout << "2. nokta koordinatlarini giriniz:";
+//	bilgileri_al(&nokta2);
+//	cout << fixed << setprecision(2);
+//	cout << "Noktalar arasindaki uzaklık: " << uzaklik_hesapla(&nokta1, &nokta2);
+//	return 0;
+//}
+
+//#include<iostream>
+//#include<iomanip>
+//#include<cmath>
+//using namespace std;
+//struct ucgen {
+//	int x1, y1;
+//	int x2, y2;
+//	int x3, y3;
+//};
+//
+//void bilgileri_al(struct ucgen* x)
+//{
+//	cin >> x->x1 >> x->y1 >> x->x2 >> x->y2 >> x->x3 >> x->y3;
+//
+//}
+//double cevre_hesapla(struct ucgen* x)
+//{
+//	double kenar1 = sqrt(pow(abs(x->x1 - x->x2), 2) + pow(abs(x -> y1 - x->y2), 2));
+//	double kenar2 = sqrt(pow(abs(x->x1 - x->x3), 2) + pow(abs(x->y1 - x->y3), 2));
+//	double kenar3 = sqrt(pow(abs(x->x2 - x->x3), 2) + pow(abs(x->y2 - x->y3), 2));
+//	return kenar1 + kenar2 + kenar3;
+//}
+//
+//double alan_hesapla(struct ucgen* x)
+//{
+//	double kenar1 = sqrt(pow(abs(x->x1 - x->x2), 2) + pow(abs(x->y1 - x->y2), 2));
+//	double kenar2 = sqrt(pow(abs(x->x1 - x->x3), 2) + pow(abs(x->y1 - x->y3), 2));
+//	double kenar3 = sqrt(pow(abs(x->x2 - x->x3), 2) + pow(abs(x->y2 - x->y3), 2));
+//	double u= kenar1 + kenar2 + kenar3;
+//	return sqrt(u * (u - kenar1) * (u - kenar2) * (u - kenar3));
+//
+//}
+//int main()
+//{
+//	struct ucgen u;
+//	bilgileri_al(&u);
+//	cout << fixed << setprecision(2);
+//	cout << cevre_hesapla(&u) << endl;
+//	cout << alan_hesapla(&u) << endl;
+//	return 0;
+//}
+//#include<iostream>
+//
+//using namespace std;
+////cep telefon yapısını yazdım. 
+//struct cep_telefonu {
+//	char marka[10];
+//	char model[10];
+//	char isletim_sistemi[10];
+//	char ekran_boyutu[10];
+//	int dahili_bellek;
+//	char kamera_cozunurluk[10];
+//	char ekran_cozunurluk[10];
+//};
+//void bilgileri_al(struct cep_telefonu* x)
+//{
+//	cout << "Bilgileri giriniz:" << endl;
+//	cout << "Marka:"; cin >> x->marka;
+//	cout << "Model:"; cin >> x->model;
+//	cout << "Isletim Sistemi:"; cin >> x->isletim_sistemi;
+//	cout << "Ekran Boyutu"; cin >> x->ekran_boyutu;
+//	cout << "Dahili Bellek:"; cin >> x->dahili_bellek;
+//	cout << "Kamera Cozunurlugu:"; cin >> x->kamera_cozunurluk;
+//	cout << "Ekran Cozunurlugu:"; cin >> x->ekran_cozunurluk;
+//
+//}
+//void bilgileri_yaz(struct cep_telefonu* x)
+//{
+//	cout << "Cep Telefonu Bilgileriniz:" << endl;
+//	cout << "Marka:" << x->marka << endl;
+//	cout << "Model:" << x->model << endl;
+//	cout << "Isletim Sistemi:" << x->isletim_sistemi << endl;
+//	cout << "Ekran Boyutu:" << x->ekran_boyutu << endl;
+//	cout << "Dahili Bellek" << x->dahili_bellek << endl;
+//	cout << "Kamera Cozunurlugu:" << x->kamera_cozunurluk << endl;
+//	cout << "Ekran Cozunurlugu:" << x->ekran_cozunurluk << endl;
+//
+//}
+//
+//int main()
+//{
+//	struct cep_telefonu a;
+//	bilgileri_al(&a);
+//	bilgileri_yaz(&a);
+//	return 0; 
+//}
+
+//#include<iostream>
+//using namespace std;
+//struct araba {
+//	char marka[10];
+//	char model[10];
+//	int model_yili;
+//	double motor_hacmi;
+//	char yakit_turu[10];
+//};
+//
+////bilgileri_al()
+//
+//void bilgileri_al(struct araba* x)
+//{
+//	cout << "Bilgileri Giriniz:" << endl;
+//	cout << "Marka:"; cin>>x->marka;
+//	cout << "Model:"; cin >> x->model;
+//	cout << "Model Yılı:"; cin >> x->model_yili;
+//	cout << "Motor Hacmi:"; cin >> x->motor_hacmi;
+//	cout << "Yakit Turu:"; cin >> x->yakit_turu;
+//	cout << "**********************************************" << endl;
+//}
+//
+//void bilgileri_yaz(struct araba* x)
+//{
+//	cout << "Arac Bilgilieri: " << endl;
+//	cout << "Marka..:" << x->marka << endl;
+//	cout << "Model..:" << x->model << endl;
+//	cout << "Motor Hacmi..:" << x->motor_hacmi << endl;
+//	cout << "Yakit Turu..:" << x->yakit_turu << endl;
+//	cout << "**********************************************" << endl;
+//
+//}
+//
+//int main()
+//{
+//	struct araba b;
+//	bilgileri_al(&b);
+//	bilgileri_yaz(&b);
+//	return 0;
+//}
+//
+//#include<iostream>
+//using namespace std;
+//struct dijital_saat {
+//	int saat; int dakika; int saniye;
+//};
+//
+//void saat_yaz(struct dijital_saat* diji)
+//{
+//	cout << (diji->saat < 10 ? "0" : "");
+//	cout << diji->saat << ":";
+//	cout << (diji->dakika < 10 ? "0" : "");
+//	cout << diji->dakika << ":";
+//	cout << (diji->saniye < 10 ? " " : "");
+//	cout << diji->saniye << endl;
+//
+//}
+//
+//void saat_ekle(struct dijital_saat* diji, int saat)
+//{
+//	diji->saat += saat;
+//	diji->saat %= 24;
+//}
+//void dakika_ekle(struct dijital_saat* diji, int dakika)
+//{
+//	diji->dakika += dakika;
+//	int saat = diji->dakika / 60;
+//	diji->dakika %= 60;
+//	saat_ekle(diji, dakika);
+//
+//}
+//
+//void saniye_ekle(struct dijital_saat* diji, int saniye)
+//{
+//	diji->saniye += saniye;
+//	int dakika = diji->saniye/60;
+//	diji->saniye %= 60;
+//	dakika_ekle(diji, dakika);
+//}
+//
+//int main()
+//{
+//	struct dijital_saat d;
+//	int saat, dakika, saniye;
+//	char x;
+//	cin >> d.saat >> x >> d.dakika >> x >> d.saniye;
+//	cin >> saat >> dakika >> saniye;
+//	saat_ekle(&d, saat);
+//	dakika_ekle(&d, dakika);
+//	saniye_ekle(&d, saniye);
+//	saat_yaz(&d);
+//	return 0;
+//}
+
+//#include<iostream>
+//using namespace std;
+//struct bilgisayar {
+//	char marka[10];
+//	char model[10];
+//	char islemci_model[10];
+//	double islemci_hizi;
+//	int ram_kapasite;
+//	int hdd_kapasite;
+//};
+//
+//void bilgileri_al(struct bilgisayar* a1)
+//{
+//	cout << "Bilgileri Giriniz:" << endl;
+//	cout << "Marka:"; cin >> a1->marka;
+//	cout << "Model:"; cin >> a1->model;
+//	cout << "Islemci Model:"; cin >> a1->islemci_model;
+//	cout << "Islemci Hizi:"; cin >> a1->islemci_hizi;
+//	cout << "RAM Kapasiteis:"; cin >> a1->ram_kapasite;
+//	cout << "HDD Kapasitesi:"; cin >> a1->hdd_kapasite;
+//	cout << "**********************************************" << endl;
+//}
+//
+//void bilgileri_yaz(struct bilgisayar *a2)
+//{
+//	cout << "Bilgisayarın Bilgileri:" << endl;
+//	cout << "Marka:" << a2->marka << endl;
+//	cout << "Model:" << a2->model << endl;
+//	cout << "Islemci Hizi:" << a2->islemci_hizi << endl;
+//	cout << "Islemci Model:" << a2->islemci_model << endl;
+//	cout << "Ram Kapasitesi:" << a2->ram_kapasite << endl;
+//	cout << "HDD Kapasitesi:" << a2->hdd_kapasite << endl;
+//	cout << "**********************************************" << endl;
+//}
+//
+//int main()
+//{
+//	struct bilgisayar a3;
+//	bilgileri_al(&a3);
+//	bilgileri_yaz(&a3);
+//	return 0;
+//}
+
+/*
+Bilgileri Giriniz:
+Marka:HP
+Model:HP -A18SF
+Islemci Model:Islemci Hizi:3.0
+RAM Kapasiteis:16
+HDD Kapasitesi:10000
+**********************************************
+Bilgisayarın Bilgileri:
+Marka:HP
+Model:HP
+Islemci Hizi:3
+Islemci Model:-A18SF
+Ram Kapasitesi:16
+HDD Kapasitesi:10000
+**********************************************
+
+C:\Users\omdog\source\repos\OMERDOGU_CPP\Debug\OMERDOGU_CPP.exe (process 6244) exited with code 0.
+Press any key to close this window . . .
+
+*/
+//
+//#include<iostream>
+//#include<iomanip>
+//#include<cstring>
+//#include<cmath>
+//using namespace std;
+//
+//struct denklem {
+//	double a, b, c, d;
+//
+//};
+//
+//void fonksiyon_yaz(struct denklem* d)
+//{
+//	cout << "y=" << d->a << "x^3";
+//	cout << (d->b < 0 ? "-" : "+") << abs(d->b) << "x^2";
+//	cout << (d->c < 0 ? "-" : "+") << abs(d->c) << "x";
+//	cout << (d->d < 0 ? "-" : "+") << abs(d->d) << endl;
+//}
+//
+//double fonksiyon_hesapla(struct denklem* d, double x)
+//{
+//	return d->a * x * x * x + d->b * x * x + d->c * x + d->d;
+//}
+//double riemann_hesapla(struct denklem* d, double a, double b, int n)
+//{
+//	double x, y, toplam = 0, dx = (b - a) / n;
+//	for (int i = 0; i < n; ++i)
+//	{
+//		x = a + i * dx + dx / 2;
+//		y = fonksiyon_hesapla(d, x);
+//		toplam += y * dx;
+//	}
+//	return toplam;
+//}
+//
+//int main()
+//{
+//	struct denklem f;
+//	double ilk_deger, son_deger;
+//	int dikdortgen_sayisi;
+//	cout << fixed << setprecision(1);
+//	cout << "Denklem katsayirini giriniz:" << endl;
+//	cin >> f.a >> f.b >> f.c >> f.d;
+//	cout << "Girilen denklem:" << endl;
+//	fonksiyon_yaz(&f);
+//	cout << "Aralik degerini ve bolum sayisini giriniz:" << endl;
+//	cin >> ilk_deger >> son_deger >> dikdortgen_sayisi;
+//	cout << "Riemann toplami:" << endl;
+//	cout << riemann_hesapla(&f, ilk_deger, son_deger, dikdortgen_sayisi);
+//	return 0;
+//}
+
+//#include<iostream>
+//#include<iomanip>
+//#include<cstring>
+//
+//using namespace std;
+//#define MAX 1000
+//
+//struct ogrenci {
+//	char ad[10];
+//	char soyad[10];
+//	double quiz_notu;
+//	double vize_notu;
+//	double final_notu;
+//	double ortalama; 
+//	char harf_notu[3];
+//};
+//
+//void ortalama_hesapla(struct ogrenci *ogr, int n)
+//{
+//	for (int i = 0; i < n; ++i)
+//	{
+//		ogr[i].ortalama = ogr[i].quiz_notu * 0.2 + ogr[i].vize_notu * 0.30 + ogr[i].final_notu * 0.50;
+//
+//	}
+//}
+//
+//void harf_notu_hesapla(struct ogrenci* ogr, int n)
+//{
+//	for (int i = 0; i < n; ++i)
+//	{
+//		if (ogr[i].ortalama>= 90)
+//		{
+//			strncpy_s(ogr[i].harf_notu, "AA", 3);
+//		}
+//		else if (ogr[i].ortalama >= 80)
+//		{
+//			strncpy_s(ogr[i].harf_notu, "BA", 3);
+//		}
+//		else if (ogr[i].ortalama >=70)
+//		{
+//			strncpy_s(ogr[i].harf_notu, "BB", 3);
+//		}
+//		else if (ogr[i].ortalama >= 60)
+//		{
+//			strncpy_s(ogr[i].harf_notu, "CB", 3);
+//		}
+//		else if (ogr[i].ortalama >= 50)
+//		{
+//			strncpy_s(ogr[i].harf_notu, "CC", 3);
+//		}
+//		else if (ogr[i].ortalama >= 40)
+//		{
+//			strncpy_s(ogr[i].harf_notu, "DC", 3);
+//		}
+//		else if (ogr[i].ortalama >= 30)
+//		{
+//			strncpy_s(ogr[i].harf_notu, "DD", 3);
+//		}
+//		else
+//		{
+//			strncpy_s(ogr[i].harf_notu, "FF", 3);
+//		}
+//	}
+//}
+//
+//void ortalamaya_gore_sirala(struct ogrenci* o, int n)
+//{
+//	struct ogrenci tmp;
+//	int ort1, ort2;
+//	for (int i = n - 1; i > 0; --i)
+//	{
+//		for (int j = 0; j < i; ++j)
+//		{
+//			ort1 = o[j].ortalama * 100;
+//			ort2 = o[j + 1].ortalama * 100;
+//			if (ort1 < ort2)
+//			{
+//				tmp = o[j];
+//				o[j] = o[j + 1];
+//				o[j + 1] = tmp;
+//			}
+//		}
+//	}
+//}
+//
+//int main()
+//{
+//	struct ogrenci o[MAX];
+//	int n;
+//	cin >> n;
+//	for (int i = 0; i < n; ++i)
+//	{
+//		cin >> o[i].ad >> o[i].soyad >> o[i].quiz_notu >> o[i].vize_notu >> o[i].final_notu;
+//
+//	}
+//	ortalama_hesapla(o, n);
+//	harf_notu_hesapla(o, n);
+//	ortalamaya_gore_sirala(o, n);
+//	cout << "Ogrenciler:" << endl;
+//	cout << fixed << setprecision(2);
+//	for (int i = 0;i < n; ++i)
+//	{
+//		cout << o[i].ad << " " << o[i].soyad << " " << o[i].harf_notu << endl;
+//	
+//	}
+//
+//	return 0;
+//}
