@@ -1,0 +1,143 @@
+//#include<iostream>
+//#include<time.h>
+//using namespace std;
+//
+//void gelecekArtikYillariHesapla(int year);
+//void gecmisArtikYillariHesapla(int year);
+//int main()
+//{
+//	time_t *now = time(0);
+//	//local time alınıyor. tm kütğpahensini structıdır 
+//	tm* ltm =localtime_s(&now);
+//	//bu yılı sistemden aldığımız bilgilere göre buluru<. 
+//	int year = 1900 + ltm->tm_year;
+//	cout << "Bu yıl:" << year << endl;
+//	gecmisArtikYillariHesapla(year);
+//	gelecekArtikYillariHesapla(year);
+//	return 0; 
+//}
+//
+//void gelecekArtikYillariHesapla(int year)
+//{
+//	cout << "\n Gelecek artık yıllar:" << endl;
+//	for (int i = year; i < year + 1000; i++)
+//	{
+//		if (i % 4 == 0 && i % 100 != 0) //şartlara dikkat ediniz. 
+//		{
+//			cout << i << "\t";
+//		}
+//	}
+//}
+//void gecmisArtikYillariHesapla(int year)
+//{
+//	cout << "\n Geçmiş artik yıllar " << endl;
+//	for (int i = year; i > 0; i--)
+//	{
+//		if (i % 4 == 0 && i % 100 != 0)
+//		{
+//			cout << i << "\t";
+//		}
+//	}
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int i = 0, bosluk = 0, satir = 0, k = 0;
+//	int toplam;
+//	cin >> satir;
+//	/* Yıldızlar ile üçgen çizmek */
+//	for (i = 1; i <= satir; ++i)
+//	{
+//		for (bosluk = 1; bosluk <= satir - i; ++bosluk)
+//		{
+//			cout << " ";
+//		}
+//		while (k != 2 * i - 1)
+//		{
+//			cout << "* ";
+//			++k;
+//		}
+//		k = 0;
+//		cout << "\n";
+//	}
+//	//ücgensel sayının hesaplanması. 
+//	toplam = satir * (satir + 1) / 2;
+//	cout << "T_" << satir << "=" << toplam << endl;
+//	return 0;
+//
+//}
+//#include<iostream>
+//using namespace std;
+//void matrisGir(int matris[3][3]);
+//void matrisYaz(int matris[3][3]);
+//float determinantHesapla(int matris[3][3]);
+//void matrisTersi(int matris[3][3]);
+//
+//int main() 
+//{
+//	int matris[3][3];
+//	matrisGir(matris);
+//	matrisYaz(matris);
+//	matrisTersi(matris);
+//	return 0;
+//}
+//
+//void matrisGir(int matris[3][3])
+//{
+//	for (int i = 0; i < 3; i++)
+//	{
+//		for (int j = 0; j < 3; j++)
+//		{
+//			cin >> matris[3][3];
+//		}
+//	}
+//}
+//
+//void matrisYaz(int matris[3][3])
+//{
+//	//matris yazılır. 
+//	cout << endl<< "Matris Yazılacak:" << endl;
+//	for (int i = 0; i < 3; i++)
+//	{
+//		cout << endl;
+//		for (int j = 0; j < 3; j++)
+//		{
+//			cout << matris[i][j] << "\t";
+//		}		
+//	}
+//}
+//
+////determinat hesaplamak
+//float determinantHesapla(int matris[3][3])
+//{
+//	float determinant = 0;
+//	for (int i = 0; i < 3; i++)
+//	{
+//		determinant = determinant + (matris[0][i] * matris[1][(i + 1) % 3] * matris[2][(i + 2) % 3] - matris[1][(i + 2) % 3] * matris[2][(i + 1) % 3]);
+//		return determinant;
+//	}
+//}
+//
+//void matrisTersi(int matris[3][3])
+//{
+//	float deterinant = determinantHesapla(matris);
+//	if (deterinant != 0)
+//	{
+//		cout << endl << "Matris tersi" << endl << endl;
+//		for (int i = 0; i < 3; i++)
+//		{
+//			cout << endl;
+//			for (int j = 0; j < 3; j++) {
+//				cout << ((matris[(i + 1) % 3][(j + 1) % 3] * matris[(i + 2) % 3][(j + 2) % 3]) - (matris[(i + 1) % 3][(j + 2) % 3] * matris[(i + 2) % 3][(j + 1) % 3])) / deterinant << "\t";
+//
+//			}
+//		}
+//	}
+//	else
+//	{
+//		cout << "\n Determinant 0 ise matrisin tersi hesaplamanamaz!" << endl; 
+//	}
+//}
+ 
